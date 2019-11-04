@@ -1,0 +1,11 @@
+F:\_Projekt\csharpe\PizzaPalatsetG1\bin\Debug\netcoreapp2.1\PizzaPalatsetG1.deps.json
+F:\_Projekt\csharpe\PizzaPalatsetG1\bin\Debug\netcoreapp2.1\PizzaPalatsetG1.runtimeconfig.json
+F:\_Projekt\csharpe\PizzaPalatsetG1\bin\Debug\netcoreapp2.1\PizzaPalatsetG1.runtimeconfig.dev.json
+f:\_Projekt\csharpe\PizzaPalatsetG1\bin\Debug\netcoreapp2.1\PizzaPalatsetG1.dll
+f:\_Projekt\csharpe\PizzaPalatsetG1\bin\Debug\netcoreapp2.1\PizzaPalatsetG1.pdb
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.csprojAssemblyReference.cache
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.csproj.CoreCompileInputs.cache
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.AssemblyInfoInputs.cache
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.AssemblyInfo.cs
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.dll
+f:\_Projekt\csharpe\PizzaPalatsetG1\obj\Debug\netcoreapp2.1\PizzaPalatsetG1.pdb
