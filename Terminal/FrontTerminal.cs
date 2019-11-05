@@ -4,11 +4,16 @@ using System.Linq;
 
 namespace PizzaPalatsetG1
 {
-    public abstract class FrontTerminal : Terminal
+    public class FrontTerminal : Terminal
     {
-        public FrontTerminal(){
+        public FrontTerminal()
+        {
             isInteractable = true;
         }
-        
+        public override void Run()
+        {
+            throw new Exception("Needs some cleaning up -- jkb");
+        }
+
     }
 }

@@ -4,11 +4,16 @@ using System.Linq;
 
 namespace PizzaPalatsetG1
 {
-    public abstract class ProcessTerminal : Terminal
+    public class ProcessTerminal : Terminal
     {
-        public ProcessTerminal(){
+        public ProcessTerminal()
+        {
             isInteractable = true;
         }
-        
+        public override void Run()
+        {
+            throw new Exception("Not yet implemented -- jkb");
+        }
+
     }
 }

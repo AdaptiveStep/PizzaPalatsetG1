@@ -5,14 +5,14 @@ using System.Linq;
 namespace PizzaPalatsetG1
 {
     public delegate Item FakeEvent(int a, int b);
+   
     public abstract class Terminal
     {
         protected bool isInteractable;
         public delegate int MatchDelegate(int a, int b); // todo;
         System.Timers.Timer fake_events = new System.Timers.Timer(); // todo;
-        public void Run()
-        {
-            // try
+        public abstract void Run();
+        // try
             // {
             //     Console.Clear();
             //     Console.SetCursorPosition(0, 0);
@@ -80,8 +80,6 @@ namespace PizzaPalatsetG1
             // }
             // Console.Write("Press any key to quit\n");
             // //Console.ReadKey();
-
-        }
         //public Item GenerateFakeOrder(){}
     }
 }
