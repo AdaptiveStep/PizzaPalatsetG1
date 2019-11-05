@@ -20,9 +20,7 @@ namespace PizzaPalatsetG1
             Cart cart = new Cart();
             cart_x = (Console.WindowWidth / 2) - menu.GetAverageItemNameLength();
             cart_y = Console.WindowHeight / 2;
-
-            
-
+      
             menu.items.ForEach(item =>
             {
                 Console.SetCursorPosition(cart_x, y);
