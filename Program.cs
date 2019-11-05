@@ -35,7 +35,9 @@ namespace PizzaPalatsetG1
             }
             catch (IndexOutOfRangeException)
             {
-                Console.Write("Rätt .exe filer ej tillagda. Saknar startargument");
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.Write("Rätt .exe filer ej tillagda. Saknar startargument \n");
+                Console.ResetColor();
             }
             catch (System.Exception)
             {

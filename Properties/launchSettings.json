@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PizzaPalatsetG1": {
+      "commandName": "Project",
+      "commandLineArgs": "front"
+    }
+  }
+}
