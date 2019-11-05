@@ -7,6 +7,9 @@ namespace PizzaPalatsetG1
     class Cart
     {
         public List<Item> items = new List<Item>();
+        public Cart(){
+            //
+        }
         public void AddItem(Item item)
         {
             this.items.Add(item);
@@ -18,6 +21,11 @@ namespace PizzaPalatsetG1
         public decimal GetOrderTotalPrice()
         {
             return this.items.Sum(item => item.price);
+        }
+        public int GetAverageItemNameLength(){
+            
+            int len = (int)Math.Round(this.items.Average(item => item.name.Length));
+            return len;
         }
         public void Reset()
         {

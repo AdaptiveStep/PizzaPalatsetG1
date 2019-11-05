@@ -6,7 +6,7 @@ namespace PizzaPalatsetG1
 {
     public class Helper
     {
-        public Menu GenerateMenu()
+        public static Menu GenerateMenu()
         {
             List<Item> items = new List<Item>()
             {
