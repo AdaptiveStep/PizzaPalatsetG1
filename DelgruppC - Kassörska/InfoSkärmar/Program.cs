@@ -1,4 +1,6 @@
 ﻿using System;
+using Console = Colorful.Console;
+using System.Drawing;
 
 namespace InfoSkärmar
 {
@@ -6,7 +8,7 @@ namespace InfoSkärmar
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainMenu.Menu();
         }
     }
 }
