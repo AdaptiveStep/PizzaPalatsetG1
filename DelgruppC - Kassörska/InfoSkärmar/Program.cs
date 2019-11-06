@@ -6,6 +6,13 @@ namespace InfoSkärmar
     {
         static void Main(string[] args)
         {
+            CashierMenu cashierMenu = new CashierMenu();
+            if (cashierMenu.Login())
+            {
+
+            }
+            //while (!cashierMenu.Login()) { }
+            
             Customer customer = new Customer();
             Employee employee = new Employee();
             Console.WriteLine($"Customer: {customer._name} ID: {customer._ID} Kredit: {customer._kredit}");

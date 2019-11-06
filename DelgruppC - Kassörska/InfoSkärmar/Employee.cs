@@ -10,7 +10,7 @@ namespace InfoSkärmar
 
         public Employee()
         {
-            _password = "password123";
+            _password = "Password123";
         }
     }
 }

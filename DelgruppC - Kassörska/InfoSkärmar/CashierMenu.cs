@@ -6,9 +6,20 @@ namespace InfoSkärmar
 {
     public class CashierMenu
     {
-        public void Login()
+        private string _password = "Password123";
+        public bool Login()
         {
+            do
+            {
+                Console.Write("Skriv in Lösenord: ");
+                string passwordCandidate = Console.ReadLine();
 
+                if (passwordCandidate == _password)
+                {
+                    return true;
+                }
+                Console.Clear();
+            } while (true);
         }
     }
 }
