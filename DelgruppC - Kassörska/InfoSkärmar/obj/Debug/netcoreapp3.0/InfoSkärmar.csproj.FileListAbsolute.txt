@@ -9,3 +9,14 @@ C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkär
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfo.cs
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.dll
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.pdb
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.csprojAssemblyReference.cache
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfoInputs.cache
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfo.cs
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.dll
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.pdb
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.exe
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.deps.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.runtimeconfig.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.runtimeconfig.dev.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.dll
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.pdb

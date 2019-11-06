@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar\\InfoSkärmar.csproj": {}
+    "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar\\InfoSkärmar.csproj": {
+    "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar\\InfoSkärmar.csproj",
+        "projectUniqueName": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
         "projectName": "InfoSkärmar",
-        "projectPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar\\InfoSkärmar.csproj",
+        "projectPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
         "packagesPath": "C:\\Users\\jonte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar\\obj\\",
+        "outputPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
