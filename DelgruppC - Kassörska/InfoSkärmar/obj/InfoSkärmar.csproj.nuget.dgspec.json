@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
+        "projectName": "InfoSkärmar",
+        "projectPath": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
+        "packagesPath": "C:\\Users\\pette\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\obj\\",
+=======
     "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj": {}
   },
   "projects": {
@@ -12,12 +25,13 @@
         "projectPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
         "packagesPath": "C:\\Users\\jonte\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\obj\\",
+>>>>>>> 6b523564a73e61d9b512211420023d2f70586f69
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jonte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pette\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +39,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/avalonia-ci/api/v2": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
@@ -40,6 +55,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Colorful.Console": {
+              "target": "Package",
+              "version": "[1.2.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
