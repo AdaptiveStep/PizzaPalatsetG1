@@ -2423,11 +2423,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
       "projectName": "InfoSkärmar",
       "projectPath": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
       "packagesPath": "C:\\Users\\pette\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\pette\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
+      "projectName": "InfoSkärmar",
+      "projectPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\InfoSkärmar.csproj",
+      "packagesPath": "C:\\Users\\jonte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jonte\\Documents\\GitHub\\PizzaPalatsetG1\\DelgruppC - Kassörska\\InfoSkärmar\\obj\\",
+>>>>>>> 6b523564a73e61d9b512211420023d2f70586f69
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

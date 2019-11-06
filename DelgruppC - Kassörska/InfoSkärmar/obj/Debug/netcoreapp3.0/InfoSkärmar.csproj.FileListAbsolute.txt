@@ -9,6 +9,7 @@ C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkär
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfo.cs
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.dll
 C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.pdb
+<<<<<<< HEAD
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.exe
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.deps.json
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.runtimeconfig.json
@@ -22,3 +23,16 @@ C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkär
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.pdb
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\Colorful.Console.dll
 C:\Users\pette\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.csproj.CopyComplete
+=======
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.csprojAssemblyReference.cache
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfoInputs.cache
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.AssemblyInfo.cs
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.dll
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\obj\Debug\netcoreapp3.0\InfoSkärmar.pdb
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.exe
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.deps.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.runtimeconfig.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.runtimeconfig.dev.json
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.dll
+C:\Users\jonte\Documents\GitHub\PizzaPalatsetG1\DelgruppC - Kassörska\InfoSkärmar\bin\Debug\netcoreapp3.0\InfoSkärmar.pdb
+>>>>>>> 6b523564a73e61d9b512211420023d2f70586f69
