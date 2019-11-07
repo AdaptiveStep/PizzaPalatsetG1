@@ -20,11 +20,38 @@ namespace PizzaPalatsetG1
                 //
                 if (args.Length < 1)
                 {
-                    InputLoop($"Saknar startargumnet. Ange manuellt 'order', 'kund', 'master', front' etc");
+                    arg = InputLoop($"Saknar startargumnet. Ange manuellt 'order', 'kund', 'master', front' etc \n");
                 }
                 else
                 {
                     arg = args[0];
+                }
+                switch (arg)
+                {
+                    case "Front":
+                        Terminal a = new FrontTerminal();
+                        a.Run();
+                        break;
+                    case "Master":
+                        Terminal b = new MasterTerminal();
+                        b.Run();
+                        break;
+                    case "Order":
+                        Terminal c = new OrderTerminal();
+                        c.Run();
+                        break;
+                    case "Process":
+                        Terminal d = new ProcessTerminal();
+                        d.Run();
+                        break;
+                    case "Debug":
+                        System.Environment.Exit(0);
+                        break;
+                    default:
+                        Console.Write("Wrong, quitting for now \n");
+                        System.Environment.Exit(0);
+                        break;
+                        //InputLoop($"'{arg}' is wrong. Ange manuellt 'order', 'kund', 'master', front' etc");
                 }
             }
             catch (IndexOutOfRangeException)
@@ -38,35 +65,11 @@ namespace PizzaPalatsetG1
             }
         }
 
-        private string InputLoop(string msg)
+        private static string InputLoop(string msg)
         {
             Console.Write($"{msg}");
             var console_input = Console.ReadLine();
-            arg = console_input.Substring(0, 1).ToUpper() + console_input.Substring(1);  // Första bokstaven till stor ex "order" => "Order"
-            switch (arg)
-            {
-                case "Front":
-                    Terminal terminal = new FrontTerminal();
-                    terminal.Run();
-                    break;
-                case "Master":
-                    Terminal terminal = new MasterTerminal();
-                    terminal.Run();
-                    break;
-                case "Order":
-                    Terminal terminal = new OrderTerminal();
-                    terminal.Run();
-                    break;
-                case "Process":
-                    Terminal terminal = new ProcessTerminal();
-                    terminal.Run();
-                    break;
-                case "Debug":
-                    this.quit();
-                    break;
-                default:
-                    InputLoop($"'{arg}' is wrong. Ange manuellt 'order', 'kund', 'master', front' etc");
-            }
+            return console_input.Substring(0, 1).ToUpper() + console_input.Substring(1);  // Första bokstaven till stor ex "order" => "Order"
         }
     }
 }
