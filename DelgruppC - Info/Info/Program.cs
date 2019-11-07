@@ -15,9 +15,12 @@ namespace Info
                 OrdersComplete complete = new OrdersComplete();
                 newOrder.NewOrder();             
                 newOrder.NewOrder();
-                complete.GetCompletedOrders(newOrder);
                 newOrder.ShowOngoingOrders();
+                complete.GetCompletedOrders(newOrder);
                 complete.ShowCompletedOrders();
+                
+                
+                newOrder.ShowOngoingOrders();
 
                 
                 

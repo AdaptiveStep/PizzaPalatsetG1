@@ -32,7 +32,9 @@ namespace Info
 
         public Customer FinishedOrder()
         {
-            return OrderID[0];
+            Customer customer = OrderID[0];
+            OrderID.RemoveAt(0);
+            return customer;
         }
         public void BeepOrder()
         {

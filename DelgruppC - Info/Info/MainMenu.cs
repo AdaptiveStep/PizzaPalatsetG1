@@ -6,6 +6,7 @@ namespace Info
 {
     class MainMenu
     {
+        
         public static void Menu()
         {
             //Console.WriteAscii("PIZZA PALATSET", Color.Red);
