@@ -4,25 +4,29 @@ using System.Text;
 
 namespace Info
 {
-    class OrdersComplete
+    public class OrdersComplete
     {
-        public Dictionary<int, string> OrderID;
+        public List<Customer> OrderID;
         public DateTime TimeStamp { get; set; }
+        //public OrdersOngoing ordersOngoing;
 
         public OrdersComplete()
         {
-            this.OrderID = new Dictionary<int, string>();
+            this.OrderID = new List<Customer>();
+            //OrdersOngoing ordersOngoing;
         }
 
-        public void GetCompletedOrders()
+        public void GetCompletedOrders(OrdersOngoing ordersOngoing)
         {
+            //int orderID = ordersOngoing.FinishedOrder();
+            OrderID.Add(ordersOngoing.FinishedOrder());
             
         }
         public void ShowCompletedOrders()
         {
-            foreach (KeyValuePair<int, string> key in OrderID)
+            foreach (var customer in OrderID)
             {
-                Console.WriteLine($"ID: {key.Key} Name: {key.Value}");
+                Console.WriteLine($"Färdig Order:\nID: {customer.ID}  Name: {customer.Name}");
             }
         }
         public void RemoveCompleteOrders()

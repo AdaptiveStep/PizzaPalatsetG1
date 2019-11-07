@@ -5,35 +5,35 @@ using System.Linq;
 
 namespace Info
 {
-    class OrdersOngoing
+    public class OrdersOngoing
     {
-        private Dictionary<int, string> OrderID;
+        private List<Customer> OrderID;
         public DateTime TimeStamp { get; set; }
 
         public OrdersOngoing()
         {
-            this.OrderID = new Dictionary<int, string>();          
+            this.OrderID = new List<Customer>();          
         }
 
         public void ShowOngoingOrders()
         {
-            foreach (KeyValuePair<int,string> key in OrderID)
+            foreach (Customer customer in OrderID)
             {
-                Console.WriteLine($"ID: {key.Key} Name: {key.Value}");
+                Console.WriteLine($"Pågående Order:\nID: {customer.ID} Name: {customer.Name}");
             }
         }
 
         public void NewOrder()         
         {
             Customer customer = new Customer();
-            OrderID.Add(customer._ID,customer._name);
+            OrderID.Add(customer);
             BeepOrder();
         }
 
-        //public int FinishedOrder()
-        //{
-            
-        //}
+        public Customer FinishedOrder()
+        {
+            return OrderID[0];
+        }
         public void BeepOrder()
         {
             System.Console.Beep();

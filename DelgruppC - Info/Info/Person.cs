@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Info
 {
-    class Person
+    public class Person
     {
-        public string _name { get; set; }
-        public int _ID { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
 
         private List<string> names = new List<string> { "Johan", "Camilla", "Sofie", "Gunnar", "Björn", "Amanda" };
         public Person()
@@ -16,9 +16,9 @@ namespace Info
             Random random = new Random((int)seed);
 
             int myNamePosition = random.Next(0, 5);
-            this._name = names[myNamePosition];
+            this.Name = names[myNamePosition];
 
-            _ID = random.Next(00, 99);
+            ID = random.Next(00, 99);
         }
     }
 }

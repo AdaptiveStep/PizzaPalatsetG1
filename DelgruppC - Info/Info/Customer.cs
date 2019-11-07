@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Info
 {
-    class Customer : Person
+    public class Customer : Person
     {
         public int _kredit { get; set; }
 
