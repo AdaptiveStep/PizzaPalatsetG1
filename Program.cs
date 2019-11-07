@@ -8,30 +8,24 @@ namespace PizzaPalatsetG1
     {
         static void Main(string[] args)
         {
+            string arg = "";
             try
             {
-                //  Auto invoke;
-                //  Eftersom den enda aktören i programmet är Terminal-klassen
-                //  så kan vi förutsätta att detta är det enda vi kallar på i main
                 //
-                //  argument att sätta i shortcuts till /bin/.exe filen
-                //      order    
-                //      front
-                //      process  
-                //      master
+                //  Uppsatt för att använda den spännande 'args'-parametern
+                //  FInns flera sätt att lägg till argument, 
+                //      -   Skapa en shortcut till /bin/.exe högerklicka den nya shortcuten och 
+                //          lägg till ett ord efter i "start in"-fältet
+                //      - Höger klicka projektet i visual studio sedan properties/debug/ och fyll command line args
                 //
-                string arg = args[0];
-                string method_name = "Run";
-                string namespace_name = "PizzaPalatsetG1";
-
-                arg += "Terminal";  // Namnet på klassen
-                arg = arg.Substring(0, 1).ToUpper() + arg.Substring(1);  // Första bokstaven till stor ex "order" => "Order"
-
-                Type type = Type.GetType(String.Format("{0}.{1}", namespace_name, arg)); // Hämtar classen
-                MethodInfo method = type.GetMethod(method_name);  // Hämtar metoden "Run"
-                object instance = Activator.CreateInstance(type); // Skapar instancen, => ex. new OrderTerminal()
-
-                method.Invoke(instance, new object[0]); // Invokar metoden $terminal->Run()
+                if (args.Length < 1)
+                {
+                    InputLoop($"Saknar startargumnet. Ange manuellt 'order', 'kund', 'master', front' etc");
+                }
+                else
+                {
+                    arg = args[0];
+                }
             }
             catch (IndexOutOfRangeException)
             {
@@ -41,6 +35,37 @@ namespace PizzaPalatsetG1
             {
                 Console.Error.Write("Error occured ¯\\_(ツ)_/¯\n");
                 throw;
+            }
+        }
+
+        private string InputLoop(string msg)
+        {
+            Console.Write($"{msg}");
+            var console_input = Console.ReadLine();
+            arg = console_input.Substring(0, 1).ToUpper() + console_input.Substring(1);  // Första bokstaven till stor ex "order" => "Order"
+            switch (arg)
+            {
+                case "Front":
+                    Terminal terminal = new FrontTerminal();
+                    terminal.Run();
+                    break;
+                case "Master":
+                    Terminal terminal = new MasterTerminal();
+                    terminal.Run();
+                    break;
+                case "Order":
+                    Terminal terminal = new OrderTerminal();
+                    terminal.Run();
+                    break;
+                case "Process":
+                    Terminal terminal = new ProcessTerminal();
+                    terminal.Run();
+                    break;
+                case "Debug":
+                    this.quit();
+                    break;
+                default:
+                    InputLoop($"'{arg}' is wrong. Ange manuellt 'order', 'kund', 'master', front' etc");
             }
         }
     }
