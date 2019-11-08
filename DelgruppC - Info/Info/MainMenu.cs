@@ -55,6 +55,7 @@ namespace Info
 
         public void TimerForCompleteOrder()
         {
+
             Random random = new Random((int)DateTime.Now.Ticks);
             Thread.Sleep(random.Next(7000, 15000));
             completeOrders.GetCompletedOrders(onGoingOrders);
