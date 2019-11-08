@@ -25,13 +25,13 @@ namespace Info
         public void ShowCompletedOrders()
         {
             int cursorPosition = 4;
-            Console.Clear();
             foreach (var customer in OrderID)
             {
-                //Console.SetCursorPosition(50, cursorPosition);
-                Console.WriteLine($"#ID: {customer.ID}");
+                Console.SetCursorPosition(60, cursorPosition);
+                Console.WriteLine($"#ID: {customer.ID} #Name: {customer.Name}");
                 cursorPosition++;
             }
+            
         }
         public void RemoveCompleteOrders()
         {

@@ -9,8 +9,7 @@ namespace Info
     class MainMenu
     {
         OrdersOngoing onGoingOrders;
-        OrdersComplete completeOrders;
-
+        OrdersComplete completeOrders;       
         public MainMenu()
         {
             this.onGoingOrders = new OrdersOngoing();
@@ -23,71 +22,45 @@ namespace Info
 
             Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
             Console.WriteLine($" ______________________________\t\t\t______________________________");
-            RunOngoingOrders();
-            RunCompleteOrders();
-
+            
             do
             {
                 GenerateNewOrder();
-                
-                
+                RunOngoingOrders();
+                RunCompleteOrders();
+
             } while (true);
 
         }
 
         public void GenerateNewOrder()
-        {
-            Random random = new Random();
-            Thread.Sleep(random.Next(5000, 10000));
+        {            
+            //Random random = new Random((int)DateTime.Now.Ticks);
+            Thread.Sleep(2000);
             onGoingOrders.NewOrder();
-            TimerForCompleteOrder();
-            RunOngoingOrders();
-            RunCompleteOrders();
-              
-            //Random random = new Random();           
-            
-            //Thread.Sleep(random.Next(5000, 10000));
-            //onGoingOrders.NewOrder();
+
+            Thread thread = new Thread(TimerForCompleteOrder);
+            thread.Start();
         }
 
         public void RunOngoingOrders()
         {
-            Thread secondThread = new Thread(() =>
-            {
-                Console.SetCursorPosition(4, 14);
-                onGoingOrders.ShowOngoingOrders();
-                
-            });
-            secondThread.Start();            
+            onGoingOrders.ShowOngoingOrders();
         }
 
         public void RunCompleteOrders()
         {
-            Thread thirdThread = new Thread(() =>
-            {                
-                Console.SetCursorPosition(4, 50);
-                completeOrders.ShowCompletedOrders();
-                
-                    
-            });
-            thirdThread.Start();
+            completeOrders.ShowCompletedOrders();
         }
 
         public void TimerForCompleteOrder()
         {
-            Thread fourthThread = new Thread(() =>
-            {
-                Thread.Sleep(1000);                
-                completeOrders.GetCompletedOrders(onGoingOrders);              
-            });
-            fourthThread.Start();
-
-            Thread fifthThread = new Thread(() =>
-            {
-                Thread.Sleep(10000);
-                completeOrders.RemoveCompleteOrders();
-            });
-            fifthThread.Start();
+            Random random = new Random((int)DateTime.Now.Ticks);
+            Thread.Sleep(random.Next(7000, 15000));
+            completeOrders.GetCompletedOrders(onGoingOrders);
+            Thread.Sleep(5000);
+            completeOrders.RemoveCompleteOrders();
         }
+
     }
 }

@@ -8,8 +8,9 @@ namespace Info
     {
         public string Name { get; set; }
         public int ID { get; set; }
-
+        private static int IDCounter = 1;
         private List<string> names = new List<string> { "Johan", "Camilla", "Sofie", "Gunnar", "Björn", "Amanda" };
+
         public Person()
         {
             long seed = (DateTime.Now.Ticks);
@@ -17,8 +18,9 @@ namespace Info
 
             int myNamePosition = random.Next(0, 5);
             this.Name = names[myNamePosition];
-
-            ID = random.Next(00, 99);
+            ID = IDCounter;
+            IDCounter++;
+            //ID = random.Next(00, 99);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Info
 {
     public class OrdersOngoing
     {
-        private List<Customer> OrderID;
+        public List<Customer> OrderID;
        
 
         public OrdersOngoing()
@@ -18,15 +18,13 @@ namespace Info
         public void ShowOngoingOrders()
         {
             int cursorPosition = 4;
-            Console.Clear();
+            
             foreach (Customer customer in OrderID)
             {
-                
-                //Console.SetCursorPosition(14, cursorPosition);
-                Console.WriteLine($"\t\t#ID: {customer.ID}");
+                Console.SetCursorPosition(12, cursorPosition);
+                Console.WriteLine($"#ID: {customer.ID} #Name: {customer.Name}");
                 cursorPosition++;
-            }
-            
+            }           
         }
 
         public void NewOrder()         
@@ -34,7 +32,6 @@ namespace Info
             Customer customer = new Customer();
             OrderID.Add(customer);
             BeepOrder();
-
         }
 
         public Customer FinishedOrder()
