@@ -7,7 +7,7 @@ namespace Info
     public class OrdersComplete
     {
         public List<Customer> OrderID;
-        public DateTime TimeStamp { get; set; }
+        
         //public OrdersOngoing ordersOngoing;
 
         public OrdersComplete()
@@ -24,14 +24,18 @@ namespace Info
         }
         public void ShowCompletedOrders()
         {
+            int cursorPosition = 4;
+            Console.Clear();
             foreach (var customer in OrderID)
             {
-                Console.WriteLine($"Färdig Order:\nID: {customer.ID}  Name: {customer.Name}");
+                //Console.SetCursorPosition(50, cursorPosition);
+                Console.WriteLine($"#ID: {customer.ID}");
+                cursorPosition++;
             }
         }
         public void RemoveCompleteOrders()
         {
-
+            OrderID.RemoveAt(0);
         }
         public void BeepOrder()
         {
