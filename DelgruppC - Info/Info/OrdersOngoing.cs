@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-
+using System.Threading;
 namespace Info
 {
     public class OrdersOngoing
@@ -22,7 +22,7 @@ namespace Info
             foreach (Customer customer in OrderID)
             {
                 Console.SetCursorPosition(12, cursorPosition);
-                Console.WriteLine($"#ID: {customer.ID} #Name: {customer.Name}");
+                Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }           
         }
@@ -30,14 +30,16 @@ namespace Info
         public void NewOrder()         
         {
             Customer customer = new Customer();
+            if (customer.ID % 2 == 0)
+                Thread.Sleep(1000);
             OrderID.Add(customer);
             BeepOrder();
         }
 
         public Customer FinishedOrder()
         {
-            Customer customer = OrderID[0];            
-            OrderID.RemoveAt(0);
+            Customer customer = OrderID[0];           
+            OrderID.Remove(OrderID[0]);
             return customer;
         }
         public void BeepOrder()
