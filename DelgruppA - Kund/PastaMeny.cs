@@ -11,8 +11,8 @@ namespace KundTermiPizzaPalatset
         public static void ChoosePasta(Order porder)
         {
             Console.Clear();
-            Console.WriteLine("Välj pasta: \n " +
-                "1: Marinara \n " +
+            Console.WriteLine("Välj pasta: \n " + "hej"
+                "1: Marinara \n " + 
                 "2: Pesto \n " +
                 "3: Carbonara \n " +
                 "4: Frutti di mare \n\n\n " +

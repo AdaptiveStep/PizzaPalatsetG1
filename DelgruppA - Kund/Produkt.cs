@@ -25,8 +25,8 @@ namespace KundTermiPizzaPalatset
     {
         public static Dictionary<string, Pizza> standardpizzas = new Dictionary<string, Pizza>()
         {
-
-            { "vesuvio" , new Pizza(name: "Vesuvio" , pingredients: new List<PIngreds>{skinka}  )},
+            //hej
+            {"Vesuvio" , new Pizza(name: "Vesuvio" , pingredients: new List<PIngreds>{skinka}  )},
           {"Capriciosa" , new Pizza(name: "Capricosa" , pingredients: new List<PIngreds>{skinka, champinjoner}  )},
           {"Capriciosa" , new Pizza(name: "Hawaii" , pingredients: new List<PIngreds>{skinka, ananas}  )},
           {"Capriciosa" , new Pizza(name: "Mexicana" , pingredients: new List<PIngreds>{skinka, jalapenjos}  )},
