@@ -48,6 +48,10 @@ namespace Cashier
                     GenerateNewOrder();
                     RunOngoingOrders();
                     RunCompleteOrders();
+                    if ()
+                    {
+
+                    }
 
                 } while (true);
             }
@@ -56,14 +60,8 @@ namespace Cashier
 
         public void GenerateNewOrder()
         {
-            //Random random = new Random((int)DateTime.Now.Ticks);
             Thread.Sleep(2000);
             onGoingOrders.NewOrder();
-
-            Thread thread = new Thread(TimerForCompleteOrder);
-            
-            
-            thread.Start();
         }
 
         public void RunOngoingOrders()
@@ -76,14 +74,14 @@ namespace Cashier
             completeOrders.ShowCompletedOrders();
         }
 
-        public  void TimerForCompleteOrder()
-        {
+        //public  void TimerForCompleteOrder()
+        //{
 
-            Random random = new Random((int)DateTime.Now.Ticks);
-            Thread.Sleep(random.Next(7000, 15000));
-            completeOrders.GetCompletedOrders(onGoingOrders);
-            Thread.Sleep(5000);
-            completeOrders.RemoveCompleteOrders();
-        }
+        //    Random random = new Random((int)DateTime.Now.Ticks);
+        //    Thread.Sleep(random.Next(7000, 15000));
+        //    completeOrders.GetCompletedOrders(onGoingOrders);
+        //    Thread.Sleep(5000);
+        //    completeOrders.RemoveCompleteOrders();
+        //}
     }
 }

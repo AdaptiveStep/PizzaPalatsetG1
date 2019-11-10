@@ -8,23 +8,31 @@ using System.Timers;
 
 namespace Cashier
 {
-    public class EventTimer
+    public class EventCompleteOrder
     {
-        public event Action CompleteOrder;
+        public ConsoleKeyInfo keyInfo;
+        
 
-        public EventTimer()
-        {
-            Timer timer = new Timer(1000 * 3);
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
-        }
+        public event EventHandler KeyPressed;
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        protected virtual void OnKeyPressed()
         {
-            if (CompleteOrder != null)
+            if (KeyPressed != null)
             {
-                CompleteOrder();
+                KeyPressed(this, EventArgs.Empty);
             }
+        }
+        public void Key(XKeyPressed xKeyPressed)
+        {
+            Console.KeyAvailable.CompareTo
+        }
+    }
+    public class XKeyPressed
+    {
+        public void XKey()
+        {
+            ConsoleKeyInfo keyInfo;
+            keyInfo.Key = ConsoleKey.X;
         }
     }
 }
