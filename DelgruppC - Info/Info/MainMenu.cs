@@ -63,6 +63,7 @@ namespace Info
             completeOrders.ShowCompletedOrders();
         }
 
+
         //public void TimerForCompleteOrder()
         //{
         //    //Random random = new Random((int)DateTime.Now.Ticks);
@@ -72,6 +73,7 @@ namespace Info
         //    completeOrders.RemoveCompleteOrders();
         //    RunCompleteOrders();     
         //}
+
 
     }
 }
