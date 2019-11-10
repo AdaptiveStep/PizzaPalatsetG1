@@ -19,10 +19,34 @@ namespace KundTermiPizzaPalatset
                 "6: Pizzasallad \n" +
                 "7: Dipsås \n\n\n " +
                 "0: Bakåt");
+            Submeny.PrintSummary(porder);
             int choice = IntIn();
             switch (choice)
             {
+                case 1:
+                    porder.AddStuff(new Tillbehör("Läsk 33cl", 15));
+                    return;
+                case 2:
+                    porder.AddStuff(new Tillbehör("Läsk 2L", 25));
+                    return;
+                case 3:
+                    porder.AddStuff(new Tillbehör("Stor Stark", 40));
+                    return;
+                case 4:
+                    porder.AddStuff(new Tillbehör("Vin, rött 40cl", 50));
+                    return;
+                case 5:
+                    porder.AddStuff(new Tillbehör("Vin, vitt 40cl", 50));
+                    return;
+                case 6:
+                    porder.AddStuff(new Tillbehör("Pizzasallad", 5));
+                    return;
+                case 7:
+                    porder.AddStuff(new Tillbehör("Dipsås", 7));
+                    return;
+
                 case 0:
+                    //Submeny.StarMenuChoice(porder);
                     return;
             }
         }

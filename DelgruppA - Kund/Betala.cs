@@ -15,7 +15,7 @@ namespace KundTermiPizzaPalatset
         {
             Console.Clear();
             Console.WriteLine("***** Kvitto *****");
-            
+            Submeny.PrintSummary(porder);
 
             Console.WriteLine("1: Betala");
             int input = IntIn();

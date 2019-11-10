@@ -8,7 +8,14 @@ namespace KundTermiPizzaPalatset
 {
     public class Submeny
     {
-        
+        internal static void PrintSummary(Order porder)
+        {
+
+            Console.WriteLine("\nUtvalda producter: "+ porder.printProducts() +
+                "\n(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")");
+            Console.WriteLine("Hela orderns pris hittils: " + porder.TotalSum());
+
+        }
         public static void StarMenuChoice(Order porder)
         {
             Order order = porder;
@@ -24,8 +31,10 @@ namespace KundTermiPizzaPalatset
                 "5: Tillbehör \n " +
                 "6: Betala \n " +
                 "0: Avbryt");
-                int input = IntIn();
 
+                PrintSummary(order);
+
+                int input = IntIn();
                 switch (input)
                 {
                     case 1:

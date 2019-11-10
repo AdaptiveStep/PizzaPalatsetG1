@@ -6,6 +6,32 @@ namespace KundTermiPizzaPalatset
 {
     public static class EgenPizza
     {
+        public static void PrintIngredientsChoices()
+        {
+            Console.Clear();
+            Console.WriteLine("Välj topping: \n " +
+                "1: Ost\n " +
+                "2: Skinka \n " +
+                "3: Champinjoner \n " +
+                "4: Ananas \n " +
+                "5: Salami \n " +
+                "9: Färdig \n\n\n " +
+                "0: Avbryt / Rensa");
+        }
+
+        internal static void PrintCustomSummary(Order porder, Pizza ppizza)
+        {
+
+            Console.WriteLine("Urvalda ingredienser ger nu priset: " + ppizza.price);
+            Console.WriteLine("Ingredienser valda nu: " + ppizza.printIngreds());
+
+            Console.WriteLine(porder.printProducts() +
+                "(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")");
+
+            int summaryprice = porder.TotalSum() + ppizza.price;
+            Console.WriteLine("Hela orderns pris hittils: " + porder.TotalSum() + " + " + ppizza.price + " = " + summaryprice);
+
+        }
         public static void CreatePizzaMenu(Order porder)
         {
             Order myorder = porder;
@@ -18,17 +44,6 @@ namespace KundTermiPizzaPalatset
                 "0: Gå till huvudmeny"
                 );
             int inputChoice = IntIn();
-
-            //myorder.CustomerProducts.Add
-            Console.Clear();
-            Console.WriteLine("Välj topping: \n " +
-                "1: Ost\n " +
-                "2: Skinka \n " +
-                "3: Champinjoner \n " +
-                "4: Ananas \n " +
-                "5: Salami \n " +
-                "9: Färdig \n\n\n " +
-                "0: Avbryt / Rensa");
 
             if (inputChoice == 1)
             {
@@ -49,47 +64,53 @@ namespace KundTermiPizzaPalatset
             if (pchoice == 1) { ppizza.botten = "Italiensk Pizzabotten"; }
             else if (pchoice == 2) { ppizza.botten = "Amerikansk Pizzabotten"; }
 
+            PrintIngredientsChoices();
+            PrintCustomSummary(porder, ppizza);
+
             bool done = false;
             while (!done)
             {
+
                 int topChoice = Terminal.IntIn();
+                PrintIngredientsChoices();
+
                 switch (topChoice)
                 {
                     case 1:
-                        ppizza.ingredients.Add(ost);
+                        ppizza.AddStuff(new PizzaIngredient("ost"));
                         break;
 
                     case 2:
-                        ppizza.ingredients.Add(skinka);
+                        ppizza.AddStuff(new PizzaIngredient("skinka"));
                         break;
 
                     case 3:
-                        ppizza.ingredients.Add(champinjoner);
+                        ppizza.AddStuff(new PizzaIngredient("champinjoner"));
                         break;
 
                     case 4:
-                        ppizza.ingredients.Add(ananas);
+                        ppizza.AddStuff(new PizzaIngredient("ananas"));
                         break;
 
                     case 5:
-                        ppizza.ingredients.Add(salami);
+                        ppizza.AddStuff(new PizzaIngredient("salami"));
                         break;
 
                     case 9:
                         done = true;
+                        porder.CustomerProducts.Add(ppizza);
                         break;
 
                     case 0:
                         done = true;
-                        ppizza.ingredients.Clear(); //möjligtvis onödig för att ordern inte kommer få pizzan
+                        ppizza.objIngredients.Clear(); //möjligtvis onödig för att ordern inte kommer få pizzan
                         break;
                 }
-                Console.Write("\nIngrediens Tillagd!\n gör fler val.\n" +
-                    "Pizzan innehåller nu: HÄR KOMMER EN STR MED INNEHÅLLET\n Gör nu ett till val eller gå tillbaka med 0: ");
+                //Console.Write("\nIngrediens Tillagd!\n gör fler val.\n");
 
-                porder.CustomerProducts.Add(ppizza);
-                Console.WriteLine(porder.TotalSum());
+                PrintCustomSummary(porder, ppizza);
             }
+
         }
     }
 }
