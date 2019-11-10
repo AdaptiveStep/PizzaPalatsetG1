@@ -28,14 +28,14 @@ namespace Info
             foreach (var customer in OrderID)
             {
                 Console.SetCursorPosition(60, cursorPosition);
-                Console.WriteLine($"#ID: {customer.ID} #Name: {customer.Name}");
-                cursorPosition++;
+                Console.WriteLine($"#ID: {customer.ID}");
+                cursorPosition++;                
             }
             
         }
         public void RemoveCompleteOrders()
         {
-            OrderID.RemoveAt(0);
+            OrderID.Remove(OrderID[0]);
         }
         public void BeepOrder()
         {

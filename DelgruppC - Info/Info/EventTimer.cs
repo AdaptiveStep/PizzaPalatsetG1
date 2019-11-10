@@ -16,7 +16,7 @@ namespace Info
             timer.Start();
         }
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        public void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             if (CompleteOrder != null)
             {
