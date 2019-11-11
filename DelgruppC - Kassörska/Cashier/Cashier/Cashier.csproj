@@ -46,7 +46,6 @@
     <Compile Include="CashierMenu.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="EventTimer.cs" />
     <Compile Include="OrdersComplete.cs" />
     <Compile Include="OrdersOnGoing.cs" />
     <Compile Include="Person.cs" />

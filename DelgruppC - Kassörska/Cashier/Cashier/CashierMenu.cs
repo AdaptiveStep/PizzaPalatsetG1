@@ -42,16 +42,27 @@ namespace Cashier
             {
                 Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
                 Console.WriteLine($" ______________________________\t\t\t______________________________");
-
+                Thread thread = new Thread(CheckForInput);
+                thread.Start();
                 do
                 {
-                    GenerateNewOrder();
-                    RunOngoingOrders();
-                    RunCompleteOrders();
-                    if ()
+                    do
                     {
+                        GenerateNewOrder();
+                        RunOngoingOrders();
+                        RunCompleteOrders();
+                    } while (true);
 
-                    }
+                    //ConsoleKey key = Console.ReadKey(false).Key;
+                    //if (key == ConsoleKey.Enter)
+                    //{
+                    //    completeOrders.GetCompletedOrders(onGoingOrders);
+                    //}
+                    //else if (key == ConsoleKey.Spacebar)
+                    //{
+                    //    completeOrders.RemoveCompleteOrders();
+                    //}
+                    
 
                 } while (true);
             }
@@ -72,6 +83,24 @@ namespace Cashier
         public void RunCompleteOrders()
         {
             completeOrders.ShowCompletedOrders();
+        }
+
+        public void CheckForInput()
+        {
+            do
+            {
+                ConsoleKey key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.Enter)
+                {
+                    completeOrders.GetCompletedOrders(onGoingOrders);
+                }
+                else if (key == ConsoleKey.Spacebar)
+                {
+                    completeOrders.RemoveCompleteOrders();
+
+                }
+
+            } while (true);
         }
 
         //public  void TimerForCompleteOrder()

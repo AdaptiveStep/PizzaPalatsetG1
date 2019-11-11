@@ -10,7 +10,6 @@ namespace Info
 
         public Customer()
         {
-            
             _kredit = 1000;
         }
     }

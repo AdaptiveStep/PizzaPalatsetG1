@@ -8,13 +8,15 @@ namespace Cashier
 {
     public class OrdersComplete
     {
-        public List<Customer> OrderID;
+        public  List<Customer> OrderID;
 
         public OrdersOnGoing ordersOngoing;
+        private int CountExistingOrders;
 
         public OrdersComplete()
         {
             this.OrderID = new List<Customer>();
+            CountExistingOrders = 0;
             //OrdersOngoing ordersOngoing;
         }
 
@@ -22,22 +24,39 @@ namespace Cashier
         {
             //int orderID = ordersOngoing.FinishedOrder();
             OrderID.Add(ordersOngoing.FinishedOrder());
+            CountExistingOrders++;
 
         }
         public void ShowCompletedOrders()
         {
             int cursorPosition = 4;
-            foreach (var customer in OrderID)
+            ResetCurrentLines();
+            if(OrderID.Count != 0)
             {
-                Console.SetCursorPosition(60, cursorPosition);
-                Console.WriteLine($"#ID: {customer.ID} #Name: {customer.Name}");
-                cursorPosition++;
+                foreach (var customer in OrderID)
+                {
+                    Console.SetCursorPosition(60, cursorPosition);
+                    Console.WriteLine($"#ID: {customer.ID}");
+                    cursorPosition++;
+                }
             }
-
+        }
+        public void ResetCurrentLines()
+        {
+            int position = 4;
+            for (int i  = 0; i < CountExistingOrders; i++)
+            {
+                Console.SetCursorPosition(60, position);
+                Console.Write("       ");
+                position++;
+            }
         }
         public void RemoveCompleteOrders()
         {
-            OrderID.RemoveAt(0);
+            if (OrderID.Count != 0)
+            {
+                OrderID.Remove(OrderID[0]);
+            }
         }
         public void BeepOrder()
         {
