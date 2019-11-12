@@ -17,15 +17,12 @@ namespace Cashier
         {
             this.OrderID = new List<Customer>();
             CountExistingOrders = 0;
-            //OrdersOngoing ordersOngoing;
         }
 
         public void GetCompletedOrders(OrdersOnGoing ordersOngoing)
         {
-            //int orderID = ordersOngoing.FinishedOrder();
             OrderID.Add(ordersOngoing.FinishedOrder());
             CountExistingOrders++;
-
         }
         public void ShowCompletedOrders()
         {
@@ -33,11 +30,18 @@ namespace Cashier
             ResetCurrentLines();
             if(OrderID.Count != 0)
             {
-                foreach (var customer in OrderID)
+                try
                 {
-                    Console.SetCursorPosition(60, cursorPosition);
-                    Console.WriteLine($"#ID: {customer.ID}");
-                    cursorPosition++;
+                    foreach (var customer in OrderID)
+                    {
+                        Console.SetCursorPosition(60, cursorPosition);
+                        Console.WriteLine($"#ID: {customer.ID}");
+                        cursorPosition++;
+                    }
+                }
+                catch (Exception e)
+                {
+                    return;
                 }
             }
         }

@@ -11,15 +11,33 @@ namespace Cashier
     {
         OrdersOnGoing onGoingOrders;
         OrdersComplete completeOrders;
-        
+        private string _password = "Password123";
         public CashierMenu()
         {
             this.onGoingOrders = new OrdersOnGoing();
             this.completeOrders = new OrdersComplete();
         }
+ 
+        public void Run()
+        {
+            if (Login())
+            {
+                Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
+                Console.WriteLine($" ______________________________\t\t\t______________________________");
+                Thread thread = new Thread(CheckForInput);
+                thread.Start();
 
-        private string _password = "Password123";
-        private bool Login()
+                do
+                {
+                    GenerateNewOrder();
+                    PrintOrders();
+                } while (true);   
+            }
+
+        }
+        
+        private bool Login()/*Denna metod hanterar lösenord och returnerar
+                            true när kassörskan skriver in korrekt lösenord*/
         {
             do
             {
@@ -35,82 +53,31 @@ namespace Cashier
             } while (true);
         }
 
-        public void Run()
-        {
-            //Console.WriteAscii("PIZZA PALATSET", Color.Red);
-            if (Login())
-            {
-                Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
-                Console.WriteLine($" ______________________________\t\t\t______________________________");
-                Thread thread = new Thread(CheckForInput);
-                thread.Start();
-                do
-                {
-                    do
-                    {
-                        GenerateNewOrder();
-                        RunOngoingOrders();
-                        RunCompleteOrders();
-                    } while (true);
-
-                    //ConsoleKey key = Console.ReadKey(false).Key;
-                    //if (key == ConsoleKey.Enter)
-                    //{
-                    //    completeOrders.GetCompletedOrders(onGoingOrders);
-                    //}
-                    //else if (key == ConsoleKey.Spacebar)
-                    //{
-                    //    completeOrders.RemoveCompleteOrders();
-                    //}
-                    
-
-                } while (true);
-            }
-
-        }
-
-        public void GenerateNewOrder()
+        public void GenerateNewOrder()/*Simulerar inkomande ordrar från kunder*/
         {
             Thread.Sleep(2000);
             onGoingOrders.NewOrder();
         }
 
-        public void RunOngoingOrders()
+        public void PrintOrders()/*Visar pågående och klara ordrar i consolen*/
         {
             onGoingOrders.ShowOngoingOrders();
-        }
-
-        public void RunCompleteOrders()
-        {
             completeOrders.ShowCompletedOrders();
         }
-
-        public void CheckForInput()
+        public void CheckForInput()/*Metod körs i separat tråd för att hantera input från kassörskan*/
         {
             do
             {
                 ConsoleKey key = Console.ReadKey(true).Key;
-                if (key == ConsoleKey.Enter)
+                if (key == ConsoleKey.Enter)//Flyttar order från pågende till klar
                 {
                     completeOrders.GetCompletedOrders(onGoingOrders);
                 }
-                else if (key == ConsoleKey.Spacebar)
+                else if (key == ConsoleKey.Spacebar)//Tar bort färdiga ordrar
                 {
                     completeOrders.RemoveCompleteOrders();
-
                 }
-
             } while (true);
         }
-
-        //public  void TimerForCompleteOrder()
-        //{
-
-        //    Random random = new Random((int)DateTime.Now.Ticks);
-        //    Thread.Sleep(random.Next(7000, 15000));
-        //    completeOrders.GetCompletedOrders(onGoingOrders);
-        //    Thread.Sleep(5000);
-        //    completeOrders.RemoveCompleteOrders();
-        //}
     }
 }

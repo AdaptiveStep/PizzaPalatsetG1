@@ -22,7 +22,6 @@ namespace Cashier
             this.Name = names[myNamePosition];
             ID = IDCounter;
             IDCounter++;
-            //ID = random.Next(00, 99);
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Cashier
     public class Customer : Person
     {
         public int _kredit { get; set; }
-
         public Customer()
         {
             _kredit = 1000;

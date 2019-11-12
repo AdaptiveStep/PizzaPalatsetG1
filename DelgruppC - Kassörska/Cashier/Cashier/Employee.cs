@@ -9,7 +9,6 @@ namespace Cashier
     public class Employee : Person
     {
         public string _password { get; set; }
-
         public Employee()
         {
             _password = "Password123";
