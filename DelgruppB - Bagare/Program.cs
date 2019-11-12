@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
-
+using System.Threading.Tasks;
 
 namespace DelgruppB___Bagare
 {
@@ -11,15 +14,12 @@ namespace DelgruppB___Bagare
             // Settings
             Console.CursorVisible = false;
             //
-            OrderWatcher watcher = new OrderWatcher();
+            Generator generator = new Generator();
+            generator.Initiate();
 
             var key = new ConsoleKeyInfo().KeyChar;
             do
             {
-                if(watcher.HasNewOrder()){
-                    var time_stamp = DateTime.Now.ToString("HH:mm:ss");
-                    Console.Write($"New order at {time_stamp}");
-                }
                 // Loop som väntar på att knapp trycks
                 while (Console.KeyAvailable == false)
                 {
@@ -30,8 +30,6 @@ namespace DelgruppB___Bagare
                 key = Console.ReadKey(true).KeyChar;
 
                 var regex = new Regex(@"[1-9]");
-                Console.Beep();
-                Console.Write("x");
 
 
             } while (key != 'q');
