@@ -1,0 +1,5 @@
+﻿Johan, 30, 5250
+Petter, 25, 600
+Josef, 66, 2000000
+Plutte, 12, 200
+Snutte, 15, 150
