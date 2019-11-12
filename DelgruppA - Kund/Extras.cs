@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using static KundTermiPizzaPalatset.Terminal;
 
 namespace KundTermiPizzaPalatset
@@ -48,6 +49,10 @@ namespace KundTermiPizzaPalatset
                 case 0:
                     //Submeny.StarMenuChoice(porder);
                     return;
+                default:
+                    Console.WriteLine("Felaktig inmatning, försök igen!");
+                    Thread.Sleep(1000);
+                    break;
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using static KundTermiPizzaPalatset.Terminal;
 
 
@@ -40,7 +41,6 @@ namespace KundTermiPizzaPalatset
                     case 1:
                         EgenPizza.CreatePizzaMenu(porder);
                         break;
-
                     case 2:
                         PizzaMeny.StandardPizza(porder);
                         break;
@@ -57,10 +57,15 @@ namespace KundTermiPizzaPalatset
                         Betala.PaymentMenu(porder);
                         done = true;
                         break;
-                    case 0: //todo
+                    case 0:
                         return;
+                    default:
+                        Console.WriteLine("Felaktig inmatning, försök igen!");
+                        Thread.Sleep(1000);
+                        break;
 
                 }
+                
             }
         }
         

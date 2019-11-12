@@ -11,8 +11,6 @@ namespace KundTermiPizzaPalatset
     {
         internal List<List<Product>> itemRegister = new List<List<Product>>();
 
-
-
         public Terminal()
         {
             //Innehåller standardgreher
@@ -66,12 +64,34 @@ namespace KundTermiPizzaPalatset
         }
  
 
-        public static int IntIn()
+
+        public static int  IntIn()
         {
-            
-            int input = Convert.ToInt32(Console.ReadLine());
-            return input;
-        }
+            Int32.TryParse(Console.ReadLine(), out int input);
+
+            bool done = false;
+            //int input = Convert.ToInt32(Console.ReadLine());
+            while (!done)
+            {
+                try
+                {
+                    
+                    done = true;
+                    return input;
+
+                }
+                catch(FormatException e)
+                {
+                    Console.WriteLine("Nått gick galet, försök igen!", e.Message);
+                    
+                }
+
+               
+            }
+ return input;
+            //return input;
+        } //tryparse readkey
+        
         
     }
 

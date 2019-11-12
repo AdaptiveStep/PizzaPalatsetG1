@@ -46,9 +46,5 @@ namespace KundTermiPizzaPalatset
             }
         }
 
-        public void PopulateCart()
-        {
-           // Product.Add(1, 2);
-        }
     }
 }
