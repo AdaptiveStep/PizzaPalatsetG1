@@ -7,13 +7,15 @@ using System.Text;
  */
 namespace Info
 {
+    /*Personklassen i version 1.0 har möjlighet att implementera namn, men detta är inget som används i denna version av programmet.
+
     /*Abstract Super klass. Skapar en ny person med namn och ett ID.*/
     public abstract class Person
     {
         public string Name { get; set; }
         public int ID { get; set; }
         private static int IDCounter = 1;
-        private List<string> names = new List<string>() { "Johan", "Camilla", "Sofie", "Gunnar", "Björn", "Amanda" };
+        private List<string> names = new List<string>() { "Johan", "Camilla", "Sofie", "Gunnar", "Björn", "Amanda" }; 
 
         public Person()/*Slumpar fram ett nytt namn, och ID ökar för varje ny instansiering av personklassen.*/
         {

@@ -12,7 +12,8 @@ namespace Info
     {
         public int _kredit { get; set; }
 
-        public Customer()
+        public Customer() /*Customer klassen i version @1.0 har funktionaliteten för att använda kredit,
+                            men det kan implementeras i senare versioner om nödvändigt*/
         {
             _kredit = 1000;
         }

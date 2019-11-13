@@ -22,7 +22,7 @@ namespace Info
 
         public void Run()/*Skriver ut menyn till consolen samt kallar på metoder för att skapa och ta bort ordrar*/
         {
-            Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
+            Console.WriteLine($"\n\t Pågående ordrar\t\t\t\tKlara ordrar");
             Console.WriteLine($" ______________________________\t\t\t______________________________");
             int counterForCompleteOrder = 0;
             int counterForRemoveCompleteOrder = 0;
@@ -30,10 +30,11 @@ namespace Info
             {
                 GenerateNewOrder();
 
-                if (counterForCompleteOrder == 2)
+                if (counterForCompleteOrder == 1) /*Orderlistorna fortsätter att öka och detta är inget vi hanterar i 
+                                                    denna version 1.0 av programmet. Detta åtgärdas i nästa version*/
                 {
                     completeOrders.GetCompletedOrders(onGoingOrders);
-                    counterForCompleteOrder = 0;
+                    counterForCompleteOrder = -1;
 
                     if (counterForRemoveCompleteOrder == 2)
                     {
