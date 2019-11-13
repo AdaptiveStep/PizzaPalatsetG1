@@ -10,7 +10,7 @@ namespace DelgruppB___Bagare
     class Config
     {
 
-        public static List<SoundFile> SoundFiles = new List<SoundFile>();
+        public static List<string> SoundList = new List<string>();
 
         public static bool ConfigurateConsole()
         {
@@ -29,13 +29,8 @@ namespace DelgruppB___Bagare
                 foreach (string audioFile in Directory.GetFiles(audio_folder))
                 {
                     FileInfo file_info = new FileInfo(audioFile);
-                    var sound_file = new SoundFile()
-                    {
-                        name = Regex.Replace(file_info.Name, @"/\.[a-zA-Z0-9]{2,7}$/", ""),
-                        location = audioFile,
-                        byteLength = file_info.Length
-                    };
-                    SoundFiles.Add(sound_file);
+                    string _name = Regex.Replace(file_info.Name, @"/\.[a-zA-Z0-9]{2,7}$/", "");
+                    SoundList.Add(audioFile);
                 }
             }
             catch (Exception e)
@@ -48,10 +43,4 @@ namespace DelgruppB___Bagare
         }
     }
 
-    public struct SoundFile
-    {
-        public string name { get; set; }
-        public string location { get; set; }
-        public long byteLength { get; set; }
-    }
 }
