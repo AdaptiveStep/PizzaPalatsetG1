@@ -12,8 +12,9 @@ namespace DelgruppB___Bagare
         static void Main(string[] args)
         {
             // Settings
-            Console.CursorVisible = false;
-            //
+            Config.ConfigurateConsole();
+            Config.SetEnvironment();
+
             Generator generator = new Generator();
             generator.Initiate();
 

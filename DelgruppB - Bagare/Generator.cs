@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DelgruppB___Bagare
 {
-    public delegate int PerformCalculation(int x, int y);
+    public delegate Item FetchFakeData(int x, int y);
 
     class Generator
     {
-        event PerformCalculation MyEvent;
+        public event FetchFakeData FakeDataEvent;
         private System.Threading.Timer timer;
         private Random rand;
         private int min = 3000;
@@ -19,7 +19,7 @@ namespace DelgruppB___Bagare
 
         public void Initiate()
         {
-            this.MyEvent += Add;
+            this.FakeDataEvent += RandomMachine.CreateRandomItem;
             rand = new Random(Environment.TickCount);
             timer = new System.Threading.Timer(TimerEvent, null, rand.Next(min, max), System.Threading.Timeout.Infinite);
         }
@@ -27,14 +27,20 @@ namespace DelgruppB___Bagare
         private void TimerEvent(object state)
         {
             //callback();
-            int r = this.MyEvent.Invoke(1, 2);
-            Console.Write(r);
+            Item newItem = FakeDataEvent.Invoke(1, 2);
             timer.Change(rand.Next(min, max), System.Threading.Timeout.Infinite);
         }
-
-        public int Add(int x, int y)
+    }
+    struct RandomMachine
+    {
+        public static Item CreateRandomItem(int itemsInOrder, int y)
         {
-            return x + y;
+            Item newItem = new Item();
+
+       
+            return newItem;
         }
+
+
     }
 }
