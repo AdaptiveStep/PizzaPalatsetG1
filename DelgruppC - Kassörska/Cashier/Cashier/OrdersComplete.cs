@@ -29,6 +29,7 @@ namespace Cashier
         {
             CompleteOrderID.Add(ordersOngoing.FinishedOrder());
             CountExistingOrders++;
+            BeepOrder();
         }
         public void ShowCompletedOrders()/*Skriver ut alla färdiga ordrar*/
         {
@@ -67,6 +68,10 @@ namespace Cashier
             {
                 CompleteOrderID.Remove(CompleteOrderID[0]);
             }
+        }
+        public void BeepOrder()/*Skapar ett "beep" när en order är klar.*/
+        {
+            System.Console.Beep();
         }
     }
 }

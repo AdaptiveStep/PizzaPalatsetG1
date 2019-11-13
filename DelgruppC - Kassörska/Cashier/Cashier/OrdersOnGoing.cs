@@ -48,7 +48,6 @@ namespace Cashier
         {
             Customer customer = new Customer();
             OnGoingOrderID.Add(customer);
-            BeepOrder();
             countExistingOrders++;
         }
 
@@ -66,11 +65,5 @@ namespace Cashier
                 return null;
             }
         }
-        public void BeepOrder()/*Skapar ett "beep" när en order läggs.*/
-        {
-            System.Console.Beep();
-        }
-
-
     }
 }
