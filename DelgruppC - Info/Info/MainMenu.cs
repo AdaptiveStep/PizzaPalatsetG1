@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
-
-
+/*  Autor: @ Grupp 1
+ *  Version @1.0
+ *  marcuswelin88@gmail.com
+ */
 namespace Info
 {
+    /* Denna klass är huvudmenyn. Den hanterar flera metoder för att lägga till ordrar,
+     * skriva ut ordrar, ändra status på ordar samt ta bort färdiga ordrar.*/
     class MainMenu
     {
         OrdersOngoing onGoingOrders;
@@ -16,10 +20,8 @@ namespace Info
             this.completeOrders = new OrdersComplete();           
         }
 
-        public void Run()
+        public void Run()/*Skriver ut menyn till consolen samt kallar på metoder för att skapa och ta bort ordrar*/
         {
-            //Console.WriteAscii("PIZZA PALATSET", Color.Red);
-
             Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
             Console.WriteLine($" ______________________________\t\t\t______________________________");
             int counterForCompleteOrder = 0;
@@ -40,30 +42,23 @@ namespace Info
                     }
                     counterForRemoveCompleteOrder++;
                 }
-                RunOngoingOrders();
-                RunCompleteOrders();
+                PrintOrders();
                 counterForCompleteOrder++;
 
             } while (true);
         }
 
-        public void GenerateNewOrder()
+        public void GenerateNewOrder()/*Simulerar att nya ordrar kommer in genom att söva tråden och sedan skapa nya ordrar.*/
         {            
             Thread.Sleep(1000);
             onGoingOrders.NewOrder();
         }
 
-        public void RunOngoingOrders()
+        public void PrintOrders()/*Skriver ut pågående och klara ordrar till consolen.*/
         {               
             onGoingOrders.ShowOngoingOrders();
-        }
-
-        public void RunCompleteOrders()
-        {
             completeOrders.ShowCompletedOrders();
         }
-
-
         //public void TimerForCompleteOrder()
         //{
         //    //Random random = new Random((int)DateTime.Now.Ticks);
@@ -73,7 +68,6 @@ namespace Info
         //    completeOrders.RemoveCompleteOrders();
         //    RunCompleteOrders();     
         //}
-
 
     }
 }

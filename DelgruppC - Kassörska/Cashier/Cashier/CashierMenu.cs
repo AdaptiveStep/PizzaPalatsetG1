@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-
+/*  Autor: @ Grupp 1
+ *  Version @1.0
+ *  jonathan.harlin@icloud.com
+ */
 namespace Cashier
 {
+    /*Denna klass är "huvudmenyn" och hanterar flera metoder,
+     * för att bland annat skapa nya ordrar samt skriva ut dem till consolen */
     public class CashierMenu
     {
         OrdersOnGoing onGoingOrders;
@@ -18,7 +23,7 @@ namespace Cashier
             this.completeOrders = new OrdersComplete();
         }
  
-        public void Run()
+        public void Run()/*Denna metod loggar in kassörskan och skriver sedan ut alla ordrar.*/
         {
             if (Login())
             {

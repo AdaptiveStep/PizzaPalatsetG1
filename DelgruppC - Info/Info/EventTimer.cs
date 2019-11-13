@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Timers;
-
+/*  Autor: @ Grupp 1
+ *  Version @1.0
+ *  marcuswelin88@gmail.com
+ */
 namespace Info
 {
     public class EventTimer

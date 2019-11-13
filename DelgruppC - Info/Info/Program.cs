@@ -1,11 +1,10 @@
 ﻿using System;
-
+/*  Autor: @ Grupp 1
+ *  Version @1.0
+ *  marcuswelin88@gmail.com
+ */
 namespace Info
-{
-    //Version 1.0
-    //
-    //
-
+{ 
     class Program
     {
         static void Main(string[] args)

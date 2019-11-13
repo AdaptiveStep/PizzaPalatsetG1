@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*  Autor: @ Grupp 1
+ *  Version @1.0
+ *  jonathan.harlin@icloud.com
+ */
 namespace Cashier
 {
     /*Denna klass hanterar de pågående ordrarna,
       den kan lägga till, ta bort samt skriva ut pågående ordrar*/
     public class OrdersOnGoing
     {
-        public List<Customer> OrderID;
+        public List<Customer> OnGoingOrderID;
         private int countExistingOrders;
 
         public OrdersOnGoing()
         {
-            this.OrderID = new List<Customer>();
+            this.OnGoingOrderID = new List<Customer>();
             countExistingOrders = 0;
         }
 
@@ -23,7 +26,7 @@ namespace Cashier
         {
             int cursorPosition = 4;
             ResetCurrentLines();
-            foreach (Customer customer in OrderID)
+            foreach (Customer customer in OnGoingOrderID)
             {
                 Console.SetCursorPosition(12, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
@@ -45,17 +48,17 @@ namespace Cashier
         public void NewOrder()/*Skapar en ny order och lägger till den i Listan för ordrar*/
         {
             Customer customer = new Customer();
-            OrderID.Add(customer);
+            OnGoingOrderID.Add(customer);
             BeepOrder();
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
                                         Samt tar bort den pågående ordern*/
         {
-            if (OrderID.Count != 0)
+            if (OnGoingOrderID.Count != 0)
             {
-                Customer customer = OrderID[0];
-                OrderID.RemoveAt(0);
+                Customer customer = OnGoingOrderID[0];
+                OnGoingOrderID.RemoveAt(0);
                 return customer;
             }
             else
