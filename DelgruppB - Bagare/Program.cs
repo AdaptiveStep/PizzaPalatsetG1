@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace DelgruppB___Bagare
 {
@@ -15,11 +18,6 @@ namespace DelgruppB___Bagare
             Generator generator = new Generator();
             generator.Initiate();
 
-            var pizzor = new List<string>();
-            pizzor.Add("Vesuvio");
-            pizzor.Add("Hawaii");
-            pizzor.Add("Kebabpizzza");
-
             var key = new ConsoleKeyInfo().KeyChar;
             do
             {
@@ -31,12 +29,6 @@ namespace DelgruppB___Bagare
                 // Allt nedanför körs bara efter knapptryck, annars en evig loop'
                 //--------------------------------
                 key = Console.ReadKey(true).KeyChar;
-
-                foreach (string pizza in pizzor)
-                {
-                    Console.Write("{0}\n", pizza);
-                }
-
 
                 var regex = new Regex(@"[1-9]");
 
