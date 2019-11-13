@@ -31,7 +31,6 @@ namespace Cashier
                 Console.SetCursorPosition(12, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
-
             }
         }
         public void ResetCurrentLines()/*Nollställer consolen från tidigare ordrar*/
