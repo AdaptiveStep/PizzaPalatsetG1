@@ -68,9 +68,5 @@ namespace Cashier
                 CompleteOrderID.Remove(CompleteOrderID[0]);
             }
         }
-        public void BeepOrder()/*Skapar ett "beep" när en order läggs.*/
-        {
-            System.Console.Beep();
-        }
     }
 }
