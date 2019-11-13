@@ -59,15 +59,5 @@ namespace Info
             onGoingOrders.ShowOngoingOrders();
             completeOrders.ShowCompletedOrders();
         }
-        //public void TimerForCompleteOrder()
-        //{
-        //    //Random random = new Random((int)DateTime.Now.Ticks);
-        //    Thread.Sleep(5000);
-        //    completeOrders.GetCompletedOrders(onGoingOrders);
-        //    Thread.Sleep(7000);
-        //    completeOrders.RemoveCompleteOrders();
-        //    RunCompleteOrders();     
-        //}
-
     }
 }
