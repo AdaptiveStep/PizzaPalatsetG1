@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
-using static KundTermiPizzaPalatset.Pizza.PIngreds;
 using static KundTermiPizzaPalatset.Terminal;
+using System.Linq;
 
 namespace KundTermiPizzaPalatset
 {
@@ -10,30 +10,31 @@ namespace KundTermiPizzaPalatset
         public static void PrintIngredientsChoices()
         {
             Console.Clear();
-            Console.WriteLine("Välj topping: \n " +
-                "1: Extra ost\n " +
-                "2: Skinka \n " +
-                "3: Champinjoner \n " +
-                "4: Ananas \n " +
-                "5: Salami \n " +
-                "6: Oliver \n " +
-                "7: Banan  \n " +
-                "8: Paprika \n" +
-                "9: Färdig \n " +
-                "0: Avbryt / Rensa");
+            AbMeny.PrintLogo();
+            Console.WriteLine("\t\t\t\t\tVälj topping: \n " +
+                "\t\t\t\t\t1: Extra ost\n " +
+                "\t\t\t\t\t2: Skinka \n " +
+                "\t\t\t\t\t3: Champinjoner \n " +
+                "\t\t\t\t\t4: Ananas \n " +
+                "\t\t\t\t\t5: Salami \n " +
+                "\t\t\t\t\t6: Oliver \n " +
+                "\t\t\t\t\t7: Banan  \n " +
+                "\t\t\t\t\t8: Paprika \n" +
+                "\t\t\t\t\t9: Färdig \n " +
+                "\t\t\t\t\t0: Avbryt / Rensa");
         }
 
         internal static void PrintCustomSummary(Order porder, Pizza ppizza)
         {
 
-            Console.WriteLine("Urvalda ingredienser ger nu priset: " + ppizza.price);
-            Console.WriteLine("Ingredienser valda nu: tomatsås ost " + ppizza.printIngreds());
+            Console.WriteLine("\n\t\t\t\tUrvalda ingredienser ger nu priset: " + ppizza.price);
+            Console.WriteLine("\t\t\t\tIngredienser valda nu: tomatsås ost " + ppizza.printIngreds());
 
             Console.WriteLine(porder.printProducts() +
-                "(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ",)");
+                "\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ",)");
 
             int summaryprice = porder.TotalSum() + ppizza.price;
-            Console.WriteLine("Hela orderns pris hittils: " + porder.TotalSum() + " + " + ppizza.price + " = " + summaryprice);
+            Console.WriteLine("\t\t\t\tHela orderns pris hittils: " + porder.TotalSum() + " + " + ppizza.price + " = " + summaryprice);
 
         }
         
@@ -43,11 +44,12 @@ namespace KundTermiPizzaPalatset
             Pizza mypizza = new Pizza(); //Returnera färdig order endast i sista switch satsen
                                          //Dvs starta först med en "tom" pizza.
             Console.Clear();
+            AbMeny.PrintLogo();
             Console.WriteLine
-                ("Komponera din egen Pizza\n " +
-                "1: Italiensk botten \n " +
-                "2: Amerikansk botten \n\n\n " +
-                "0: Gå till huvudmeny"
+                ("\t\t\t\t\tKomponera din egen Pizza\n " +
+                "\t\t\t\t\t1: Italiensk botten \n " +
+                "\t\t\t\t\t2: Amerikansk botten \n\n\n " +
+                "\t\t\t\t\t0: Gå till huvudmeny"
                 );
             int inputChoice = IntIn();
 
@@ -80,12 +82,17 @@ namespace KundTermiPizzaPalatset
 
                 int topChoice = Terminal.IntIn();
                 PrintIngredientsChoices();
-
                 switch (topChoice)
                 {
                     case 1:
-                        ppizza.AddStuff(new PizzaIngredient("extra ost"));
-                        break;
+                        bool toolittlecheese = ppizza.objIngredients.Where(x => x.name == "ost").Count() < 1;
+
+                        if (toolittlecheese)
+                        {
+                            ppizza.AddStuff(new PizzaIngredient("ost"));
+                            break;
+                        }
+                        else { Console.WriteLine("Max två ostpålägg."); break; }
 
                     case 2:
                         ppizza.AddStuff(new PizzaIngredient("skinka"));
@@ -120,7 +127,7 @@ namespace KundTermiPizzaPalatset
                         }
                         else
                         {
-                            Console.WriteLine("för många val av ingredienser, vänligen gör om din pizza med mindre än 6 ingredienser");
+                            Console.WriteLine("\t\t\t\t\tför många val av ingredienser, vänligen gör om din pizza med mindre än 6 ingredienser");
                             break;
                         }
 
@@ -129,7 +136,7 @@ namespace KundTermiPizzaPalatset
                         ppizza.objIngredients.Clear(); //möjligtvis onödig för att ordern inte kommer få pizzan
                         break;
                     default:
-                        Console.WriteLine("Felaktig inmatning, försök igen!");
+                        Console.WriteLine("\t\t\t\t\tFelaktig inmatning, försök igen!");
                         Thread.Sleep(1000);
                         break;
                 }

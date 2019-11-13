@@ -12,12 +12,13 @@ namespace KundTermiPizzaPalatset
         public static void ChoosePasta(Order porder)
         {
             Console.Clear();
-            Console.WriteLine("Välj pasta: \n " +
-                "1: Marinara \n " + 
-                "2: Pesto \n " +
-                "3: Carbonara \n " +
-                "4: Frutti di mare \n\n\n " +
-                "0: Bakåt");
+            AbMeny.PrintPastaLogo();
+            Console.WriteLine("\t\t\t\t\tVälj pasta: \n " +
+                "\t\t\t\t\t1: Marinara \n " + 
+                "\t\t\t\t\t2: Pesto \n " +
+                "\t\t\t\t\t3: Carbonara \n " +
+                "\t\t\t\t\t4: Frutti di mare \n\n\n " +
+                "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
             int pastachoice = IntIn();
             switch (pastachoice)

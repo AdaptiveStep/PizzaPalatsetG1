@@ -11,15 +11,16 @@ namespace KundTermiPizzaPalatset
         public static void SelectExtras(Order porder)
         {
             Console.Clear();
-            Console.WriteLine("Tillbehör: \n " +
-                "1: Läsk 33cl \n " +
-                "2: Läsk 2L \n " +
-                "3: Stor Stark \n " +
-                "4: Vin, rött 40cl\n" +
-                "5: Vin, vitt 40cl \n" +
-                "6: Pizzasallad \n" +
-                "7: Dipsås \n\n\n " +
-                "0: Bakåt");
+            AbMeny.PrintExtraLogo();
+            Console.WriteLine("\t\t\t\t\tTillbehör: \n " +
+                "\t\t\t\t\t1: Läsk 33cl \n " +
+                "\t\t\t\t\t2: Läsk 2L \n " +
+                "\t\t\t\t\t3: Stor Stark \n " +
+                "\t\t\t\t\t4: Vin, rött 40cl\n" +
+                "\t\t\t\t\t5: Vin, vitt 40cl \n" +
+                "\t\t\t\t\t6: Pizzasallad \n" +
+                "\t\t\t\t\t7: Dipsås \n\n\n " +
+                "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
             int choice = IntIn();
             switch (choice)

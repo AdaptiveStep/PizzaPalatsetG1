@@ -12,14 +12,15 @@ namespace KundTermiPizzaPalatset
         public static void StandardPizza(Order porder)
         {
             Console.Clear();
-            Console.WriteLine("Välj pizza: \n " +
-                "1: Vesuvio \n " +
-                "2: Capriciosa \n " +
-                "3: Hawaii \n " +
-                "4: Mexicana \n " +
-                "5: Vegetarisk \n " +
-                "6: Salami \n \n \n" +
-                "0: Bakåt");
+            AbMeny.PrintLogo();
+            Console.WriteLine("\t\t\t\t\tVälj pizza: \n " +
+                "\t\t\t\t\t1: Vesuvio \n " +
+                "\t\t\t\t\t2: Capriciosa \n " +
+                "\t\t\t\t\t3: Hawaii \n " +
+                "\t\t\t\t\t4: Mexicana \n " +
+                "\t\t\t\t\t5: Vegetarisk \n " +
+                "\t\t\t\t\t6: Salami \n \n \n" +
+                "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
             int pizzachoice = IntIn();
             bool done = false;
@@ -56,7 +57,7 @@ namespace KundTermiPizzaPalatset
                         //Submeny.StarMenuChoice(porder);
                         return;
                     default:
-                        Console.WriteLine("Felaktig inmatning, försök igen!");
+                        Console.WriteLine("\t\t\t\t\tFelaktig inmatning, försök igen!");
                         Thread.Sleep(1000);
                         break;
                 }
@@ -65,8 +66,8 @@ namespace KundTermiPizzaPalatset
             //Pizza onepizza = (Pizza) porder.CustomerProducts[porder.CustomerProducts.Count- 1];
 
             Console.WriteLine("" +
-                "Är du nöjd med din meny? " +
-                "Tryck 0 för att acceptera och 1 för att " +
+                "\t\t\t\t\tÄr du nöjd med din meny? \n" +
+                "\t\t\t\t\tTryck 0 för att acceptera och 1 för att " +
                 "skräddarsy din pizza: ");
 
             int choice = IntIn();

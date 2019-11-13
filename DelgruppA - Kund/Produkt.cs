@@ -1,6 +1,5 @@
 ﻿
 using System.Collections.Generic;
-using static KundTermiPizzaPalatset.Pizza.PIngreds;
 
 namespace KundTermiPizzaPalatset
 {
@@ -42,14 +41,14 @@ namespace KundTermiPizzaPalatset
         };
         #region Hide
         //Möjliga ingredienser för en instans
-        public enum PIngreds { tomatsås, tomat, sallad, räkor, ost, skinka, champinjoner, ananas, jalapenjos, kebab, oxfile, paprika, salami, oliver };
+        //public enum PIngreds { tomatsås, tomat, sallad, räkor, ost, skinka, champinjoner, ananas, jalapenjos, kebab, oxfile, paprika, salami, oliver };
         public string botten;
 
         //Ingredienser som självaste instansen kommer innehålla
         public List<PizzaIngredient> ingredients = new List<PizzaIngredient>();
 
         public List<PizzaIngredient> objIngredients = new List<PizzaIngredient>();
-        public static List<PizzaIngredient> standardingredients = new List<PizzaIngredient> ("tomatsås", "ost");
+        public static List<PizzaIngredient> standardingredients = Lings("skinka", "ost");
 
 
 
@@ -63,12 +62,16 @@ namespace KundTermiPizzaPalatset
             if (botten == "Italiensk Pizzabotten") this.price += 50;
             else if (botten == "Amerikansk Pizzabotten") this.price += 70;
 
+            PizzaIngredient ost = new PizzaIngredient("ost");
+            PizzaIngredient tomatsos = new PizzaIngredient("Tomatsås");
+
             if (pingredients != null)
             {
+                
 
                 //garanterar att instansen har ost och tomatsås
-                if (!pingredients.Contains(ost)) { this.ingredients.Add(ost); }
-                if (!pingredients.Contains(tomatsås)) { this.ingredients.Add(tomatsås); }
+                if (!pingredients.Contains(ost)) { pingredients.Add(ost); }
+                if (!pingredients.Contains(tomatsos)) { pingredients.Add(tomatsos); }
 
                 //Bygger upp instansens ingredienslista
                 foreach (PizzaIngredient ing in pingredients)
@@ -79,7 +82,7 @@ namespace KundTermiPizzaPalatset
             else if (pingredients == null)
             {
                 this.ingredients.Add(ost);
-                this.ingredients.Add(tomatsås);
+                this.ingredients.Add(tomatsos);
             }
 
             this.botten = pbotten;
