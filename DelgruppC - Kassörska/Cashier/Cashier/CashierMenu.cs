@@ -73,14 +73,17 @@ namespace Cashier
         {
             do
             {
-                ConsoleKey key = Console.ReadKey(true).Key;
-                if (key == ConsoleKey.Enter)//Flyttar order från pågende till klar
+                if (onGoingOrders.OnGoingOrderID.Count != 0)
                 {
-                    completeOrders.GetCompletedOrders(onGoingOrders);
-                }
-                else if (key == ConsoleKey.Spacebar)//Tar bort färdiga ordrar
-                {
-                    completeOrders.RemoveCompleteOrders();
+                    ConsoleKey key = Console.ReadKey(true).Key;
+                    if (key == ConsoleKey.Enter)//Flyttar order från pågende till klar
+                    {
+                        completeOrders.GetCompletedOrders(onGoingOrders);
+                    }
+                    else if (key == ConsoleKey.Spacebar)//Tar bort färdiga ordrar
+                    {
+                        completeOrders.RemoveCompleteOrders();
+                    }
                 }
             } while (true);
         }

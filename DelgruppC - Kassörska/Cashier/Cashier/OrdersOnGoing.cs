@@ -13,7 +13,7 @@ namespace Cashier
       den kan lägga till, ta bort samt skriva ut pågående ordrar*/
     public class OrdersOnGoing
     {
-        public List<Customer> OnGoingOrderID;
+        public List<Customer> OnGoingOrderID { get; set; }
         private int countExistingOrders;
 
         public OrdersOnGoing()
