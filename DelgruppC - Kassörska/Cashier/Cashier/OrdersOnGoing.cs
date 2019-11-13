@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Cashier
 {
+    /*Denna klass hanterar de pågående ordrarna,
+      den kan lägga till, ta bort samt skriva ut pågående ordrar*/
     public class OrdersOnGoing
     {
         public List<Customer> OrderID;
@@ -17,7 +19,7 @@ namespace Cashier
             countExistingOrders = 0;
         }
 
-        public void ShowOngoingOrders()
+        public void ShowOngoingOrders()/*Skriver ut pågående ordrar*/
         {
             int cursorPosition = 4;
             ResetCurrentLines();
@@ -29,7 +31,7 @@ namespace Cashier
 
             }
         }
-        public void ResetCurrentLines()
+        public void ResetCurrentLines()/*Nollställer consolen från tidigare ordrar*/
         {
             int position = 4;
             for (int i = 0; i < countExistingOrders; i++)
@@ -40,14 +42,15 @@ namespace Cashier
             }
         }
 
-        public void NewOrder()
+        public void NewOrder()/*Skapar en ny order och lägger till den i Listan för ordrar*/
         {
             Customer customer = new Customer();
             OrderID.Add(customer);
             BeepOrder();
         }
 
-        public Customer FinishedOrder()
+        public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
+                                        Samt tar bort den pågående ordern*/
         {
             if (OrderID.Count != 0)
             {
@@ -60,7 +63,7 @@ namespace Cashier
                 return null;
             }
         }
-        public void BeepOrder()
+        public void BeepOrder()/*Skapar ett "beep" när en order läggs.*/
         {
             System.Console.Beep();
         }
