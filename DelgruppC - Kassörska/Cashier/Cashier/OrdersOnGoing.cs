@@ -50,6 +50,7 @@ namespace Cashier
             Customer customer = new Customer();
             OnGoingOrderID.Add(customer);
             BeepOrder();
+            countExistingOrders++;
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
