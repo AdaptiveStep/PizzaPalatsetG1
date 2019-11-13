@@ -9,7 +9,9 @@ using System.Threading.Tasks;
  */
 namespace Cashier
 {
-    /*Abstract Super klass. Skapar en ny person med namn och ett ID.*/
+    /*Abstract Super klass. Skapar en ny person med namn och ett ID.
+     Person klassen i version @1.0 har funktionaliteten för att använda namn,
+     men det kan implementeras i senare versioner om nödvändigt*/
     public abstract class Person
     {
         public string Name { get; set; }
