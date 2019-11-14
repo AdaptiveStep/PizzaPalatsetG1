@@ -11,12 +11,13 @@ namespace KundTermiPizzaPalatset
         {
              
             Console.Clear();
-            Console.WriteLine("Salladsmeny: \n " +
-                "1: Avocadosallad \n " +
-                "2: FetaOst-sallad \n " +
-                "3: Räksallad \n " +
-                "4: Kycklingsallad\n\n\n" +
-                "0: Bakåt");
+            AbMeny.PrintSaladLogo();
+            Console.WriteLine("\t\t\t\t\tSalladsmeny: \n " +
+                "\t\t\t\t\t1: Avocadosallad \n " +
+                "\t\t\t\t\t2: FetaOst-sallad \n " +
+                "\t\t\t\t\t3: Räksallad \n " +
+                "\t\t\t\t\t4: Kycklingsallad\n\n\n" +
+                "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
             int saladchoice = IntIn();
             switch (saladchoice)
