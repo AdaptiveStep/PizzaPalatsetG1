@@ -22,8 +22,10 @@ namespace Info
 
         public void Run()/*Skriver ut menyn till consolen samt kallar på metoder för att skapa och ta bort ordrar*/
         {
-            Console.WriteLine($"\n\t Pågående ordrar\t\t\t\tKlara ordrar");
-            Console.WriteLine($" ______________________________\t\t\t______________________________");
+            Console.SetBufferSize(300, 400);
+            PrintLogo();
+            Console.WriteLine($"\n\t\t Pågående ordrar\t\t\tKlara ordrar");
+            Console.WriteLine($"\t ______________________________\t\t______________________________");
             int counterForCompleteOrder = 0;
             int counterForRemoveCompleteOrder = 0;
             do
@@ -59,6 +61,24 @@ namespace Info
         {               
             onGoingOrders.ShowOngoingOrders();
             completeOrders.ShowCompletedOrders();
+        }
+        public static void PrintLogo()
+        {
+            string pizzalogo = @"   
+                            ██████╗ ██╗███████╗███████╗ █████╗                
+                            ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
+                            ██████╔╝██║  ███╔╝   ███╔╝ ███████║               
+                            ██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║               
+                            ██║     ██║███████╗███████╗██║  ██║               
+                            ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝               
+                                                                                    
+            ██████╗  █████╗ ██╗      █████╗ ████████╗███████╗███████╗████████╗
+            ██╔══██╗██╔══██╗██║     ██╔══██╗╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+            ██████╔╝███████║██║     ███████║   ██║   ███████╗█████╗     ██║   
+            ██╔═══╝ ██╔══██║██║     ██╔══██║   ██║   ╚════██║██╔══╝     ██║   
+            ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
+            ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
+            Console.WriteLine(pizzalogo);
         }
     }
 }

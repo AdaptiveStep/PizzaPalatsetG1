@@ -24,11 +24,11 @@ namespace Info
 
         public void ShowOngoingOrders()/*Skriver ut pågående ordrar*/
         {
-            int cursorPosition = 4;
+            int cursorPosition = 18;
             
             foreach (Customer customer in OngoingOrderID)
             {
-                Console.SetCursorPosition(12, cursorPosition);
+                Console.SetCursorPosition(21, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }           
