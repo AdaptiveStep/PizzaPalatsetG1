@@ -73,7 +73,7 @@ namespace Cashier
         {
             do
             {
-                if (onGoingOrders.OnGoingOrderID.Count != 0)
+                if (onGoingOrders.OnGoingOrderID.Count != 0 && onGoingOrders.OnGoingOrderID.Count != 1)
                 {
                     ConsoleKey key = Console.ReadKey(true).Key;
                     if (key == ConsoleKey.Enter)//Flyttar order från pågende till klar

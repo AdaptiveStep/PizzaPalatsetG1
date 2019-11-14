@@ -31,7 +31,6 @@ namespace Cashier
                 Console.SetCursorPosition(12, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
-
             }
         }
         public void ResetCurrentLines()/*Nollställer consolen från tidigare ordrar*/
@@ -49,7 +48,7 @@ namespace Cashier
         {
             Customer customer = new Customer();
             OnGoingOrderID.Add(customer);
-            BeepOrder();
+            countExistingOrders++;
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
@@ -66,11 +65,5 @@ namespace Cashier
                 return null;
             }
         }
-        public void BeepOrder()/*Skapar ett "beep" när en order läggs.*/
-        {
-            System.Console.Beep();
-        }
-
-
     }
 }
