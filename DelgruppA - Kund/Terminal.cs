@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using static KundTermiPizzaPalatset.Pizza;
+using System.Threading;
 
 
 
@@ -10,8 +11,6 @@ namespace KundTermiPizzaPalatset
     public class Terminal
     {
         internal List<List<Product>> itemRegister = new List<List<Product>>();
-
-
 
         public Terminal()
         {
@@ -66,12 +65,79 @@ namespace KundTermiPizzaPalatset
         }
  
 
-        public static int IntIn()
+
+        public static int  IntIn()
         {
-            
-            int input = Convert.ToInt32(Console.ReadLine());
-            return input;
-        }
+            Console.WriteLine();
+
+            //string infot;
+            ConsoleKeyInfo info = Console.ReadKey(true);
+            //infot = Convert.ToChar(info);   
+            //Int32.TryParse(Console.ReadLine(), out int input);
+
+            bool done = false;
+            //int input = Convert.ToInt32(Console.ReadLine());
+            while (!done)
+            {
+                if (info.KeyChar.ToString() == "1")
+                {
+
+                    return 1;
+                }
+                else if (info.Key == ConsoleKey.D2)
+                {
+                    return 2;
+                }
+                else if (info.Key == ConsoleKey.D3)
+                {
+                    return 3;
+                }
+                else if (info.Key == ConsoleKey.D4)
+                {
+                    return 4;
+                }
+                else if (info.Key == ConsoleKey.D5)
+                {
+                    return 5;
+                }
+                else if (info.Key == ConsoleKey.D6)
+                {
+                    return 6;
+                }
+                else if (info.Key == ConsoleKey.D7)
+                {
+                    return 7;
+                }
+                else if (info.Key == ConsoleKey.D8)
+                {
+                    return 8;
+                }
+                else if (info.Key == ConsoleKey.D9)
+                {
+                    return 9;
+                }
+                else
+                { Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen"); Thread.Sleep(200); break; }
+                
+                //try
+                //{
+                    
+                //    done = true;
+                //    return input;
+
+                //}
+                //catch(FormatException e)
+                //{
+                //    Console.WriteLine("Nått gick galet, försök igen!", e.Message);
+                    
+                //}
+
+               
+            }
+            return 0;  //return input;
+            //return input;
+        } //tryparse readkey
+        
         
     }
 

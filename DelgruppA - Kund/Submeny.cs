@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using static KundTermiPizzaPalatset.Terminal;
 
 
@@ -11,9 +12,9 @@ namespace KundTermiPizzaPalatset
         internal static void PrintSummary(Order porder)
         {
 
-            Console.WriteLine("\nUtvalda producter: "+ porder.printProducts() +
-                "\n(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")");
-            Console.WriteLine("Hela orderns pris hittils: " + porder.TotalSum());
+            Console.WriteLine("\n\t\t\t\t\tUtvalda producter: " + porder.printProducts() +
+                "\n\t\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")\n");
+            Console.WriteLine("\t\t\t\t\tHela orderns pris hittils: " + porder.TotalSum());
 
         }
         public static void StarMenuChoice(Order porder)
@@ -23,14 +24,15 @@ namespace KundTermiPizzaPalatset
             while (!done)
             {
                 Console.Clear();
-                Console.WriteLine("Välkommen till PizzaPalatset! \n " +
-                "1: Komponera egen Pizza \n " +
-                "2: Standard Pizzor \n " +
-                "3: Sallad\n " +
-                "4: Pasta \n " +
-                "5: Tillbehör \n " +
-                "6: Betala \n " +
-                "0: Avbryt");
+                AbMeny.PrintLogo();
+                Console.WriteLine("\t\t\t\t\tVälkommen till PizzaPalatset! \n " +
+                "\t\t\t\t\t1: Komponera egen Pizza \n " +
+                "\t\t\t\t\t2: Standard Pizzor \n " +
+                "\t\t\t\t\t3: Sallad\n " +
+                "\t\t\t\t\t4: Pasta \n " +
+                "\t\t\t\t\t5: Tillbehör \n " +
+                "\t\t\t\t\t6: Betala \n " +
+                "\t\t\t\t\t0: Avbryt");
 
                 PrintSummary(order);
 
@@ -40,7 +42,6 @@ namespace KundTermiPizzaPalatset
                     case 1:
                         EgenPizza.CreatePizzaMenu(porder);
                         break;
-
                     case 2:
                         PizzaMeny.StandardPizza(porder);
                         break;
@@ -57,10 +58,15 @@ namespace KundTermiPizzaPalatset
                         Betala.PaymentMenu(porder);
                         done = true;
                         break;
-                    case 0: //todo
+                    case 0:
                         return;
+                    default:
+                        Console.WriteLine("\t\t\t\tFelaktig inmatning, försök igen!");
+                        Thread.Sleep(1000);
+                        break;
 
                 }
+                
             }
         }
         

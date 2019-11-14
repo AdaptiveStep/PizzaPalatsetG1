@@ -5,12 +5,6 @@ namespace KundTermiPizzaPalatset
 {
     public class Order
     {
-        //DateTime paid;
-        //DateTime startProd;
-        //DateTime finishProd;
-        //DateTime delivered;
-
-
         public Person customer;
         internal List<Product> CustomerProducts = new List<Product>();
 
