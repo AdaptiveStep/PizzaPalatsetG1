@@ -20,7 +20,6 @@ namespace KundTermiPizzaPalatset
                 Order order = new Order(customer);
                 Submeny.StarMenuChoice(order);
             }
-            Console.ReadKey
         }
     }
 }
