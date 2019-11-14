@@ -13,7 +13,7 @@ namespace KundTermiPizzaPalatset
         {
 
             Console.WriteLine("\n\t\t\t\t\tUtvalda producter: " + porder.printProducts() +
-                "\n\t\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")");
+                "\n\t\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ")\n");
             Console.WriteLine("\t\t\t\t\tHela orderns pris hittils: " + porder.TotalSum());
 
         }
@@ -61,7 +61,7 @@ namespace KundTermiPizzaPalatset
                     case 0:
                         return;
                     default:
-                        Console.WriteLine("Felaktig inmatning, försök igen!");
+                        Console.WriteLine("\t\t\t\tFelaktig inmatning, försök igen!");
                         Thread.Sleep(1000);
                         break;
 

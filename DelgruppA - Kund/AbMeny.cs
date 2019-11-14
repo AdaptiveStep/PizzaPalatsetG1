@@ -19,7 +19,8 @@ namespace KundTermiPizzaPalatset
         }
         public static void PrintExtraLogo()
         {
-                 string extralogo = @"                    ██╗██╗                                  ██╗██╗           
+                 string extralogo = @"                  
+                                                          ██╗██╗           
                                                           ╚═╝╚═╝    
      ████████╗██╗██╗     ██╗     ██████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ 
      ╚══██╔══╝██║██║     ██║     ██╔══██╗██╔════╝██║  ██║██╔═══██╗██╔══██╗

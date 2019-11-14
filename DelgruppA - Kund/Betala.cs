@@ -31,9 +31,9 @@ namespace KundTermiPizzaPalatset
                 
                 Console.Clear();
                 AbMeny.PrintLogo();
-                Console.WriteLine("\t\t\t\t\tBekräfta order genom att trycka 123.");
+                Console.WriteLine("\t\t\t\t\tBekräfta order genom att trycka 1.");
                 int input2 = IntIn();
-                if(input2 == 123)
+                if(input2 == 1)
                 {
                     Console.Clear();
                     AbMeny.PrintLogo();

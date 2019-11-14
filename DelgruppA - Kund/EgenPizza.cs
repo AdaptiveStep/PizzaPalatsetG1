@@ -92,7 +92,7 @@ namespace KundTermiPizzaPalatset
                             ppizza.AddStuff(new PizzaIngredient("ost"));
                             break;
                         }
-                        else { Console.WriteLine("Max två ostpålägg."); break; }
+                        else { Console.WriteLine("\t\t\t\tMax två ostpålägg."); break; }
 
                     case 2:
                         ppizza.AddStuff(new PizzaIngredient("skinka"));
