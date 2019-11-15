@@ -26,9 +26,11 @@ namespace Cashier
         public void Run()/*Denna metod loggar in kassörskan och skriver sedan ut alla ordrar.*/
         {
             if (Login())
-            {
-                Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
-                Console.WriteLine($" ______________________________\t\t\t______________________________");
+            {     
+                Console.SetWindowSize(100, 45);
+                PrintLogo();                
+                Console.WriteLine($"\n\t\t Pågående ordrar\t\t\tKlara ordrar");
+                Console.WriteLine($"\t ______________________________\t\t______________________________");
                 Thread thread = new Thread(CheckForInput);
                 thread.Start();
 
@@ -45,7 +47,9 @@ namespace Cashier
                             true när kassörskan skriver in korrekt lösenord*/
         {
             do
-            {
+            {            
+                Console.SetWindowSize(100, 45);
+                PrintLogo();
                 Console.Write("Skriv in Lösenord: ");
                 string passwordCandidate = Console.ReadLine();
 
@@ -86,6 +90,24 @@ namespace Cashier
                     }
                 }
             } while (true);
+        }
+        public static void PrintLogo()//Printar ut PizzaPalatset logga.
+        {
+            string pizzalogo = @"   
+                        ██████╗ ██╗███████╗███████╗ █████╗                
+                        ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
+                        ██████╔╝██║  ███╔╝   ███╔╝ ███████║               
+                        ██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║               
+                        ██║     ██║███████╗███████╗██║  ██║               
+                        ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝               
+                                                                                    
+        ██████╗  █████╗ ██╗      █████╗ ████████╗███████╗███████╗████████╗
+        ██╔══██╗██╔══██╗██║     ██╔══██╗╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+        ██████╔╝███████║██║     ███████║   ██║   ███████╗█████╗     ██║   
+        ██╔═══╝ ██╔══██║██║     ██╔══██║   ██║   ╚════██║██╔══╝     ██║   
+        ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
+        ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
+            Console.WriteLine(pizzalogo);
         }
     }
 }

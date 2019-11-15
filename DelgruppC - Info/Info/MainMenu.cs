@@ -22,9 +22,11 @@ namespace Info
 
         public void Run()/*Skriver ut menyn till consolen samt kallar på metoder för att skapa och ta bort ordrar*/
         {
-            Console.WriteLine($"\n\t Pågående ordrar\t\t\t\tKlara ordrar");
-            Console.WriteLine($" ______________________________\t\t\t______________________________");
-            int counterForCompleteOrder = 0;
+            Console.SetWindowSize(100, 45);
+            PrintLogo();
+            Console.WriteLine($"\n\t\t Pågående ordrar\t\t\tKlara ordrar");
+            Console.WriteLine($"\t ______________________________\t\t______________________________");
+            int counterForCompleteOrder = 0; /*Räknare för att gå in i if-satserna och flytta över/ta bort ordrar*/
             int counterForRemoveCompleteOrder = 0;
             do
             {
@@ -51,7 +53,7 @@ namespace Info
 
         public void GenerateNewOrder()/*Simulerar att nya ordrar kommer in genom att söva tråden och sedan skapa nya ordrar.*/
         {            
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             onGoingOrders.NewOrder();
         }
 
@@ -59,6 +61,24 @@ namespace Info
         {               
             onGoingOrders.ShowOngoingOrders();
             completeOrders.ShowCompletedOrders();
+        }
+        public static void PrintLogo() /*Printar ut Logo för pizzaPalatset*/
+        {
+            string pizzalogo = @"   
+                            ██████╗ ██╗███████╗███████╗ █████╗                
+                            ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
+                            ██████╔╝██║  ███╔╝   ███╔╝ ███████║               
+                            ██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║               
+                            ██║     ██║███████╗███████╗██║  ██║               
+                            ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝               
+                                                                                    
+            ██████╗  █████╗ ██╗      █████╗ ████████╗███████╗███████╗████████╗
+            ██╔══██╗██╔══██╗██║     ██╔══██╗╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+            ██████╔╝███████║██║     ███████║   ██║   ███████╗█████╗     ██║   
+            ██╔═══╝ ██╔══██║██║     ██╔══██║   ██║   ╚════██║██╔══╝     ██║   
+            ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
+            ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
+            Console.WriteLine(pizzalogo);
         }
     }
 }
