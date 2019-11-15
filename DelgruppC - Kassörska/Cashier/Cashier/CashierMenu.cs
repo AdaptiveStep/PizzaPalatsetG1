@@ -91,7 +91,7 @@ namespace Cashier
                 }
             } while (true);
         }
-        public static void PrintLogo()
+        public static void PrintLogo()//Printar ut PizzaPalatset logga.
         {
             string pizzalogo = @"   
                         ██████╗ ██╗███████╗███████╗ █████╗                
