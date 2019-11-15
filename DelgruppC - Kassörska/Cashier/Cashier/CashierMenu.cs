@@ -29,8 +29,8 @@ namespace Cashier
             {     
                 Console.SetWindowSize(100, 45);
                 PrintLogo();                
-                Console.WriteLine($"\t Pågående ordrar\t\t\t\tKlara ordrar");
-                Console.WriteLine($" ______________________________\t\t\t______________________________");
+                Console.WriteLine($"\n\t\t Pågående ordrar\t\t\tKlara ordrar");
+                Console.WriteLine($"\t ______________________________\t\t______________________________");
                 Thread thread = new Thread(CheckForInput);
                 thread.Start();
 

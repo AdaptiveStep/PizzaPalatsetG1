@@ -30,7 +30,7 @@ namespace Cashier
             ResetCurrentLines();
             foreach (Customer customer in OnGoingOrderID)
             {
-                Console.SetCursorPosition(13, cursorPosition);
+                Console.SetCursorPosition(21, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }
@@ -40,7 +40,7 @@ namespace Cashier
             int position = 18;
             for (int i = 0; i < countExistingOrders; i++)
             {
-                Console.SetCursorPosition(13, position);
+                Console.SetCursorPosition(21, position);
                 Console.Write("       ");
                 position++;
             }
