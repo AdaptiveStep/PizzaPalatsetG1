@@ -11,6 +11,7 @@ namespace Cashier
 {
     class Program
     {
+        //Implementera Buffersize för konsolen
         static void Main(string[] args)/*Startar upp kassörskans terminal.*/
         {
             CashierMenu cashierMenu = new CashierMenu();

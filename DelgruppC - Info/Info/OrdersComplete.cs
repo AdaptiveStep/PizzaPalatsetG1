@@ -26,10 +26,10 @@ namespace Info
         }
         public void ShowCompletedOrders()/*Skriver ut alla färdiga ordrar*/
         {
-            int cursorPosition = 4;
+            int cursorPosition = 18;
             foreach (var customer in completeOrderID)
             {
-                Console.SetCursorPosition(60, cursorPosition);
+                Console.SetCursorPosition(59, cursorPosition); /*CursorPosition för att hitta rätt plats på consolen.*/
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;                
             }
@@ -39,7 +39,7 @@ namespace Info
         {
             completeOrderID.Remove(completeOrderID[0]);
         }
-        public void BeepOrder()/*Skapar ett "beep" när en order läggs.*/
+        public void BeepOrder()/*Skapar ett "beep" när en order blir klar.*/
         {
             System.Console.Beep();
         }
