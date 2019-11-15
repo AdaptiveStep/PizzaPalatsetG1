@@ -28,7 +28,7 @@ namespace Info
             
             foreach (Customer customer in OngoingOrderID)
             {
-                Console.SetCursorPosition(21, cursorPosition);
+                Console.SetCursorPosition(21, cursorPosition); /*CursorPosition för att hitta rätt plats på consolen.*/
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }           

@@ -53,7 +53,7 @@ namespace Info
 
         public void GenerateNewOrder()/*Simulerar att nya ordrar kommer in genom att söva tråden och sedan skapa nya ordrar.*/
         {            
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             onGoingOrders.NewOrder();
         }
 
