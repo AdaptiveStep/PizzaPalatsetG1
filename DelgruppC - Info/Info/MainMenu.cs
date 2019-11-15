@@ -22,11 +22,11 @@ namespace Info
 
         public void Run()/*Skriver ut menyn till consolen samt kallar på metoder för att skapa och ta bort ordrar*/
         {
-            Console.SetBufferSize(300, 400);
+            Console.SetWindowSize(100, 45);
             PrintLogo();
             Console.WriteLine($"\n\t\t Pågående ordrar\t\t\tKlara ordrar");
             Console.WriteLine($"\t ______________________________\t\t______________________________");
-            int counterForCompleteOrder = 0;
+            int counterForCompleteOrder = 0; /*Räknare för att gå in i if-satserna och flytta över/ta bort ordrar*/
             int counterForRemoveCompleteOrder = 0;
             do
             {
@@ -62,7 +62,7 @@ namespace Info
             onGoingOrders.ShowOngoingOrders();
             completeOrders.ShowCompletedOrders();
         }
-        public static void PrintLogo()
+        public static void PrintLogo() /*Printar ut Logo för pizzaPalatset*/
         {
             string pizzalogo = @"   
                             ██████╗ ██╗███████╗███████╗ █████╗                
