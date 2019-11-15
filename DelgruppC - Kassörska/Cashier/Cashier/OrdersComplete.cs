@@ -33,7 +33,7 @@ namespace Cashier
         }
         public void ShowCompletedOrders()/*Skriver ut alla färdiga ordrar*/
         {
-            int cursorPosition = 4;
+            int cursorPosition = 18;
             ResetCurrentLines();
             if(CompleteOrderID.Count != 0)
             {
@@ -41,7 +41,7 @@ namespace Cashier
                 {
                     foreach (var customer in CompleteOrderID)
                     {
-                        Console.SetCursorPosition(60, cursorPosition);
+                        Console.SetCursorPosition(59, cursorPosition);
                         Console.WriteLine($"#ID: {customer.ID}");
                         cursorPosition++;
                     }
@@ -54,10 +54,10 @@ namespace Cashier
         }
         public void ResetCurrentLines()/*Nollställer consolen från tidigare orderID*/
         {
-            int position = 4;
+            int position = 18;
             for (int i  = 0; i < CountExistingOrders; i++)
             {
-                Console.SetCursorPosition(60, position);
+                Console.SetCursorPosition(59, position);
                 Console.Write("       ");
                 position++;
             }
