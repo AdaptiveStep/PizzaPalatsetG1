@@ -45,10 +45,10 @@ namespace PizzamakerTerminal
             {
                 Queue.DeleteFirstCompleteOrder();
             }
-            else if (key.Key == ConsoleKey.NumPad0)
+            else if (key.Key == ConsoleKey.NumPad0 || key.Key == ConsoleKey.D0)
             {
+                Cock.Logout();
                 Console.Clear();
-                Program.Main();
             }
             else
             {

@@ -1,1 +1,1 @@
-﻿// ActiveOrder => Order
+﻿// Omstruktur ActiveOrder har flyttats till Order.cs

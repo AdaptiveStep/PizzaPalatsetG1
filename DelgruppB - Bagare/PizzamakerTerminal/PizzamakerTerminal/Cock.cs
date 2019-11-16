@@ -44,5 +44,10 @@ namespace PizzamakerTerminal
                 Console.Clear();
             }
         }
+
+        public static void Logout()
+        {
+            Status.IsLoggedIn = false;
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace PizzamakerTerminal
         public static void Main()
         {
             // Hello screen thingy
-            View.DisplayIntro();
+            View.DisplayFancyIntro();
             // Text som hälsar användaren välkommen till sin egen arbetsplats
             View.DisplayWelcome();
             // 'key' reassignas till så fort ny Console.ReadKey() sker
