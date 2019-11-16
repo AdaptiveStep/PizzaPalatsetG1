@@ -22,6 +22,7 @@ namespace Info
                                                                     genom att hämta ordern från pågående ordrar.*/
         {
             completeOrderID.Add(ordersOngoing.FinishedOrder());
+            BeepOrder();
             
         }
         public void ShowCompletedOrders()/*Skriver ut alla färdiga ordrar*/

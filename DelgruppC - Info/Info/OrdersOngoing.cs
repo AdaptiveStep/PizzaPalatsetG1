@@ -40,7 +40,6 @@ namespace Info
             if (customer.ID % 2 == 0)
                 Thread.Sleep(1000);
             OngoingOrderID.Add(customer);
-            BeepOrder();
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
@@ -49,10 +48,6 @@ namespace Info
             Customer customer = OngoingOrderID[0];           
             OngoingOrderID.Remove(OngoingOrderID[0]);
             return customer;
-        }
-        public void BeepOrder()
-        {
-            System.Console.Beep();
         }
 
            
