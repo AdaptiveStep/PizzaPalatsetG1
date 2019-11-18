@@ -70,8 +70,8 @@ namespace KundTermiPizzaPalatset
 		{
 			Console.WriteLine();
 
-			// bytte ut TryParse / ConsoleReadLine till en Consolekey istället.
-			ConsoleKeyInfo info = Console.ReadKey(true);
+            // bytte ut TryParse / ConsoleReadLine till en Consolekey istället.
+            ConsoleKeyInfo info; //= Console.ReadKey(true);
 			//string infot = Convert.ToChar(info);   
 			//Int32.TryParse(Console.ReadLine(), out int input);
 
@@ -79,12 +79,13 @@ namespace KundTermiPizzaPalatset
 			//int input = Convert.ToInt32(Console.ReadLine());
 			while (!done)
 			{
-				//if(info.KeyChar>47 && info.KeyChar<58){
-				//	Console.WriteLine("inge fuffens nu");
-				//	continue;
-				//}
+                info = Console.ReadKey(true);
+                //if(info.KeyChar>47 && info.KeyChar<58){
+                //	Console.WriteLine("inge fuffens nu");
+                //	continue;
+                //}
 
-				if (info.KeyChar.ToString() == "1")
+                if (info.KeyChar.ToString() == "1")
 				{
 
 					return 1;
@@ -121,10 +122,17 @@ namespace KundTermiPizzaPalatset
 				{
 					return 9;
 				}
+                else if (info.Key == ConsoleKey.D0)
+                {
+                    return 0;
+                }
 				else
-				{ Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen"); 
-				Thread.Sleep(200); 
-				//break; 
+				{ 
+                    Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen"); 
+				    Thread.Sleep(200);
+                    //Console.Cur  
+                    continue;
+				    //break; 
 				}
 				
 				//try
