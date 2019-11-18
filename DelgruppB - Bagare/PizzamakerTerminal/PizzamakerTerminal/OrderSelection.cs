@@ -30,7 +30,7 @@ namespace PizzamakerTerminal
                         Console.Write(dot);
                         System.Threading.Thread.Sleep(900);
                     }
-                    
+                    Console.Beep();
                     // Set Order som klar
                     orderToBake.isComplete = true;
 
@@ -61,7 +61,7 @@ namespace PizzamakerTerminal
             }
             else
             {
-                Console.Beep(); // Error Beep när
+                //Console.Beep(); // Error Beep när
             }
         }
     }
