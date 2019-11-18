@@ -1,1 +1,0 @@
-Group B - Bagare - Fixa alla menyer och gör allt intuitivt/snyggt för bagaren. 

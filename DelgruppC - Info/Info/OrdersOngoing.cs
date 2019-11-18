@@ -24,11 +24,11 @@ namespace Info
 
         public void ShowOngoingOrders()/*Skriver ut pågående ordrar*/
         {
-            int cursorPosition = 4;
+            int cursorPosition = 18;
             
             foreach (Customer customer in OngoingOrderID)
             {
-                Console.SetCursorPosition(12, cursorPosition);
+                Console.SetCursorPosition(21, cursorPosition); /*CursorPosition för att hitta rätt plats på consolen.*/
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }           
@@ -40,7 +40,6 @@ namespace Info
             if (customer.ID % 2 == 0)
                 Thread.Sleep(1000);
             OngoingOrderID.Add(customer);
-            BeepOrder();
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
@@ -49,10 +48,6 @@ namespace Info
             Customer customer = OngoingOrderID[0];           
             OngoingOrderID.Remove(OngoingOrderID[0]);
             return customer;
-        }
-        public void BeepOrder()
-        {
-            System.Console.Beep();
         }
 
            

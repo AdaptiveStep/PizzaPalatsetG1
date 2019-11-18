@@ -15,30 +15,32 @@ namespace Cashier
     {
         public List<Customer> OnGoingOrderID { get; set; }
         private int countExistingOrders;
+        private int simulatedOrderCount;
 
         public OrdersOnGoing()
         {
             this.OnGoingOrderID = new List<Customer>();
             countExistingOrders = 0;
+            simulatedOrderCount = 0;
         }
 
         public void ShowOngoingOrders()/*Skriver ut pågående ordrar*/
         {
-            int cursorPosition = 4;
+            int cursorPosition = 18;
             ResetCurrentLines();
             foreach (Customer customer in OnGoingOrderID)
             {
-                Console.SetCursorPosition(12, cursorPosition);
+                Console.SetCursorPosition(21, cursorPosition);
                 Console.WriteLine($"#ID: {customer.ID}");
                 cursorPosition++;
             }
         }
         public void ResetCurrentLines()/*Nollställer consolen från tidigare ordrar*/
         {
-            int position = 4;
+            int position = 18;
             for (int i = 0; i < countExistingOrders; i++)
             {
-                Console.SetCursorPosition(12, position);
+                Console.SetCursorPosition(21, position);
                 Console.Write("       ");
                 position++;
             }
@@ -46,9 +48,13 @@ namespace Cashier
 
         public void NewOrder()/*Skapar en ny order och lägger till den i Listan för ordrar*/
         {
-            Customer customer = new Customer();
-            OnGoingOrderID.Add(customer);
-            countExistingOrders++;
+            if (simulatedOrderCount < 26)
+            {
+                Customer customer = new Customer();
+                OnGoingOrderID.Add(customer);
+                countExistingOrders++;
+                simulatedOrderCount++;
+            }
         }
 
         public Customer FinishedOrder()/*Flyttar över en pågående order till färdig order.
