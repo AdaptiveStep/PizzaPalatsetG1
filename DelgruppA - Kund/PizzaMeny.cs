@@ -62,7 +62,7 @@ namespace KundTermiPizzaPalatset
                         Thread.Sleep(1000);
                         Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
                         Console.WriteLine("                                                                                                       ");
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 2);
                         continue;
                 }
                 
