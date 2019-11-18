@@ -68,7 +68,7 @@ namespace KundTermiPizzaPalatset
 
 		public static int  IntIn()
 		{
-			Console.WriteLine()
+            Console.WriteLine();
             ConsoleKeyInfo info; //= Console.ReadKey(true);
 
 			bool done = false;
