@@ -39,7 +39,7 @@ namespace KundTermiPizzaPalatset
                     //Submeny.StarMenuChoice(porder);
                     return;
                 default:
-                    Console.WriteLine("Felaktig inmatning, försök igen!");
+                    Console.WriteLine("\t\t\t\tFelaktig inmatning, försök igen!");
                     Thread.Sleep(1000);
                     break;
             }

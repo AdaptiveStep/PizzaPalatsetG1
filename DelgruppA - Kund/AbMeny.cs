@@ -8,6 +8,7 @@ namespace KundTermiPizzaPalatset
     {
         public static void PrintPastaLogo()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string pastalogo = @"
                         ██████╗  █████╗ ███████╗████████╗ █████╗ 
                         ██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
@@ -16,10 +17,12 @@ namespace KundTermiPizzaPalatset
                         ██║     ██║  ██║███████║   ██║   ██║  ██║
                         ╚═╝     ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝";
             Console.WriteLine(pastalogo);
+            Console.ResetColor();
         }
         public static void PrintExtraLogo()
         {
-                 string extralogo = @"                  
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            string extralogo = @"                  
                                                           ██╗██╗           
                                                           ╚═╝╚═╝    
      ████████╗██╗██╗     ██╗     ██████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ 
@@ -29,9 +32,11 @@ namespace KundTermiPizzaPalatset
         ██║   ██║███████╗███████╗██████╔╝███████╗██║  ██║╚██████╔╝██║  ██║
         ╚═╝   ╚═╝╚══════╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝";
             Console.WriteLine(extralogo);
+            Console.ResetColor();
         }
         public static void PrintSaladLogo()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string saladlogo = @"
                        ███████╗ █████╗ ██╗     ██╗      █████╗ ██████╗ 
                        ██╔════╝██╔══██╗██║     ██║     ██╔══██╗██╔══██╗
@@ -40,10 +45,12 @@ namespace KundTermiPizzaPalatset
                        ███████║██║  ██║███████╗███████╗██║  ██║██████╔╝
                        ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ ";
             Console.WriteLine(saladlogo);
+            Console.ResetColor();
         }
       
         public static void PrintLogo()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string pizzalogo = @"   
                                   ██████╗ ██╗███████╗███████╗ █████╗                
                                   ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
@@ -59,10 +66,12 @@ namespace KundTermiPizzaPalatset
                   ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
                   ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
             Console.WriteLine(pizzalogo);
+            Console.ResetColor();
         }
         
         public static void PrintPayLogo()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string paylogo = @"
                                 ██████╗ ███████╗████████╗ █████╗ ██╗      █████╗ 
                                 ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██║     ██╔══██╗
@@ -71,13 +80,16 @@ namespace KundTermiPizzaPalatset
                                 ██████╔╝███████╗   ██║   ██║  ██║███████╗██║  ██║
                                 ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝";
             Console.WriteLine(paylogo);
+            Console.ResetColor();
         }
         public static void PrintFooter()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string footer = @"                                                                                                                        
                   ███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗
                   ╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝";
             Console.WriteLine(footer);
+            Console.ResetColor();
         }
     }
 }

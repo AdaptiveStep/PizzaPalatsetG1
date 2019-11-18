@@ -13,4 +13,5 @@ namespace KundTermiPizzaPalatset
             credit = 1000;
         }
     }
+
 }

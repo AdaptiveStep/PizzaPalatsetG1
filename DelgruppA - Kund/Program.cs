@@ -1,11 +1,14 @@
-﻿using System;
+﻿/* Project name: PizzaPalatset
+ * author: @ AndréTheGiant @ Hariz aka Skattmasen
+ * groupmembers: Elchin, Jonathan, Marcus, André, Hariz
+ * version: @2.3
+ * andre.lundstrom@gmail.com - Hariz @kth.se
+ **/
+using System;
 
 namespace KundTermiPizzaPalatset
 {
-    /* author: @ AndréTheGiant @ Hariz aka Skattmasen
- * version: @2.1
- * andre.lundstrom@gmail.com - Hariz@kth.se
- * */
+    
     public class Program
     {
         static void Main(string[] args)
@@ -14,6 +17,7 @@ namespace KundTermiPizzaPalatset
             while (true)
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 string pizzalogo = @"   
                                   ██████╗ ██╗███████╗███████╗ █████╗                
                                   ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
@@ -40,6 +44,7 @@ namespace KundTermiPizzaPalatset
          ╚████╔╝ ██║  ██║███████╗██║  ██╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║ ╚████║██╗
           ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝╚═╝";
                 Console.WriteLine(pizzalogo);
+                Console.ResetColor();
                 Console.WriteLine("\t\t\t\t\tPress anykey to continue ");
                 Console.ReadKey();
                 Customer customer = new Customer();
