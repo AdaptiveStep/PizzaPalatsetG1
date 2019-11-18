@@ -8,15 +8,13 @@ namespace PizzamakerTerminal
     {
         public int ID { get; set; }
         public bool isComplete { get; set; }
-        private static int IDCount = 1;
         private string Name;
         private string[] Ingredients;
 
         public Order()
         {
-            ID = IDCount;
-            isComplete = false;
-            IDCount++;
+            ID = Queue.GetLowestIdNum();
+            isComplete = false;       
         }
         public void SetIngredients(string[] ingrs)
         {

@@ -11,11 +11,11 @@ namespace PizzamakerTerminal
             string[] users = new string[4] { "user1", "user2", "user3", "user4" };
             string[] passwds = new string[4] { "1111", "2222", "3333", "4444" };
             // do-while loop dyker så länge upp tills användaren inmater korrekta uppgifter 
-            Console.WriteLine("\t\t\t\t\t\t\t\t\tInlogningsinformation: ");
-            for (int i = 0; i < users.Length; i++)
-            {
-                Console.WriteLine("\t\t\t\t\t\t\t\t\tanvändernamn: {0} >> lösenord: {1}", users[0], users[1]);
-            }
+            //Console.WriteLine("\t\t\t\t\t\t\t\t\tInlogningsinformation: ");
+            //for (int i = 0; i < users.Length; i++)
+            //{
+            //    Console.WriteLine("\t\t\t\t\t\t\t\t\tanvändernamn: {0} >> lösenord: {1}", users[0], users[1]);
+            //}
             // Tar input uppgifter från bagare
             Console.Write("\nSkriv ditt användarnamn: ");
             string username = Console.ReadLine();
