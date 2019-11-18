@@ -129,9 +129,10 @@ namespace KundTermiPizzaPalatset
                 else
 
                 {
-                    Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen");
-                    Thread.Sleep(200);
-                    Console.WriteLine(" ");
+                    Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen:");
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                    Console.WriteLine("                                                                                                       ");
                     continue;
                     //break; 
                 }
