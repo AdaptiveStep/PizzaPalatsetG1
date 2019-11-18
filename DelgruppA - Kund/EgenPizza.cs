@@ -21,10 +21,10 @@ namespace KundTermiPizzaPalatset
                 "\t\t\t\t\t7: Banan  \n " +
                 "\t\t\t\t\t8: Paprika \n" +
                 "\t\t\t\t\t9: Färdig \n " +
-                "\t\t\t\t\t0: Avbryt / Rensa");
+                "\t\t\t\t\t0: Gå till förgående meny");
         }
 
-        internal static void PrintCustomSummary(Order porder, Pizza ppizza)
+        internal static void PrintCustomSummary(Order porder, Pizza ppizza) //håller reda på valda ingredienser och pris
         {
 
             Console.WriteLine("\n\t\t\t\tUrvalda ingredienser ger nu priset: " + ppizza.price);
@@ -33,7 +33,7 @@ namespace KundTermiPizzaPalatset
             Console.WriteLine(porder.printProducts() +
                 "\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ",)");
 
-            int summaryprice = porder.TotalSum() + ppizza.price;
+            int summaryprice = porder.TotalSum() + ppizza.price; //totalsumma av pris
             Console.WriteLine("\t\t\t\tHela orderns pris hittils: " + porder.TotalSum() + " + " + ppizza.price + " = " + summaryprice);
 
         }
@@ -70,11 +70,11 @@ namespace KundTermiPizzaPalatset
             }
         }
 
-        internal static void CaseLoop(Pizza ppizza, Order porder)
+        internal static void CaseLoop(Pizza ppizza, Order porder) //Val av pizzaingredienser
         {            
 
             PrintIngredientsChoices();
-            PrintCustomSummary(porder, ppizza);
+            PrintCustomSummary(porder, ppizza); 
 
             bool done = false;
             while (!done)
@@ -87,7 +87,7 @@ namespace KundTermiPizzaPalatset
                     case 1:
                         bool toolittlecheese = ppizza.objIngredients.Where(x => x.name == "ost").Count() < 1;
 
-                        if (toolittlecheese)
+                        if (toolittlecheese) //Tony önskade specifikt att man ej ska kunna välja mer än 2 extraost på pizzan.
                         {
                             ppizza.AddStuff(new PizzaIngredient("ost"));
                             break;
@@ -119,7 +119,7 @@ namespace KundTermiPizzaPalatset
                         break;
 
                     case 9:
-                        if (porder.CustomerProducts.Count < 6)
+                        if (porder.CustomerProducts.Count < 6) // max 6 extrapålägg
                         {
                             done = true;
                             porder.CustomerProducts.Add(ppizza);
@@ -128,12 +128,14 @@ namespace KundTermiPizzaPalatset
                         else
                         {
                             Console.WriteLine("\t\t\t\t\tför många val av ingredienser, vänligen gör om din pizza med mindre än 6 ingredienser");
+                            Thread.Sleep(1500);
+                            ppizza.objIngredients.Clear(); 
                             break;
                         }
 
                     case 0:
                         done = true;
-                        ppizza.objIngredients.Clear(); //möjligtvis onödig för att ordern inte kommer få pizzan
+                        ppizza.objIngredients.Clear(); 
                         break;
                     default:
                         Console.WriteLine("\t\t\t\t\tFelaktig inmatning, försök igen!");

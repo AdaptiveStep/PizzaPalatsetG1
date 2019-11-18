@@ -132,10 +132,10 @@ namespace KundTermiPizzaPalatset
     }
 
     internal class Pasta : Product
-    {
+    { 
         public Pasta(string name, int price = 50) : base(name, price)
         {
-
+            //Pastaobjekt med 50:- som standardpris
         }
 
     }
@@ -143,7 +143,7 @@ namespace KundTermiPizzaPalatset
     internal class Sallad : Product
     {
         public string dressing;
-
+        
         public Sallad(string name, int price = 70, string pdressing = "") :
                base(name, price)
         {

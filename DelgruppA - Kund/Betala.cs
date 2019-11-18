@@ -16,10 +16,10 @@ namespace KundTermiPizzaPalatset
             Console.Clear();
             AbMeny.PrintPayLogo();
             Console.WriteLine("\t\t\t\t\t***** Kvitto *****");
-            Submeny.PrintSummary(porder);
+            Submeny.PrintSummary(porder);  //Visar summering av order som kvitto.
 
 
-            Console.WriteLine("\t\t\t\t\t1: Betala");
+            Console.WriteLine("\t\t\t\t\t1: Betala"); //Vi skrotade kundkorgen och valde att simulera ett köp istället
             
             int input = IntIn();
             if(input == 1)

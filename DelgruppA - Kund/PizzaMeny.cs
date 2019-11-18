@@ -63,7 +63,7 @@ namespace KundTermiPizzaPalatset
                 }
                 
             }
-            //Pizza onepizza = (Pizza) porder.CustomerProducts[porder.CustomerProducts.Count- 1];
+            
 
             Console.WriteLine("" +
                 "\t\t\t\t\tÄr du nöjd med din meny? \n" +

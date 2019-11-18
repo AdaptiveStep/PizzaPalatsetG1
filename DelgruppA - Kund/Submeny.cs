@@ -36,7 +36,7 @@ namespace KundTermiPizzaPalatset
 
                 PrintSummary(order);
 
-                int input = IntIn();
+                int input = IntIn(); //IntIn är istället för ReadLine eller ConsoleKey.
                 switch (input)
                 {
                     case 1:

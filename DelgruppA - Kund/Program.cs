@@ -50,6 +50,8 @@ namespace KundTermiPizzaPalatset
                 Customer customer = new Customer();
                 Order order = new Order(customer);
                 Submeny.StarMenuChoice(order);
+                //När användaren trycker på valfri knapp så skapas ett nytt customer och orderobjekt
+                //orderobjektet skickas med genom hela programmet när ny metod kallas.
             }
         }
     }

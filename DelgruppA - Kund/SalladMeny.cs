@@ -35,7 +35,7 @@ namespace KundTermiPizzaPalatset
                     porder.AddStuff(new Sallad("Kycklingsallad", 170, "Smultron och Mahmodisås"));
                     return;
                 case 0:
-                    //Submeny.StarMenuChoice(porder);
+                    
                     return;
             }
 

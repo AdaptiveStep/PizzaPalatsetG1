@@ -23,7 +23,7 @@ namespace KundTermiPizzaPalatset
                 "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
             int choice = IntIn();
-            switch (choice)
+            switch (choice) // addade radavbrytning så att kvittot inte blir för "brett"
             {
                 case 1:
                     porder.AddStuff(new Tillbehör("Läsk 33cl\n\t\t\t\t\t", 15));

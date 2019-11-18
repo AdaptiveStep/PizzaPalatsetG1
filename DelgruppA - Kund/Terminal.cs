@@ -70,15 +70,16 @@ namespace KundTermiPizzaPalatset
         {
             Console.WriteLine();
 
-            //string infot;
+            // bytte ut TryParse / ConsoleReadLine till en Consolekey istället.
             ConsoleKeyInfo info = Console.ReadKey(true);
-            //infot = Convert.ToChar(info);   
+            //string infot = Convert.ToChar(info);   
             //Int32.TryParse(Console.ReadLine(), out int input);
 
             bool done = false;
             //int input = Convert.ToInt32(Console.ReadLine());
             while (!done)
             {
+                if(info.KeyChar>47 && info.KeyChar<58)
                 if (info.KeyChar.ToString() == "1")
                 {
 
