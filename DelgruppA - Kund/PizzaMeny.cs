@@ -22,11 +22,12 @@ namespace KundTermiPizzaPalatset
                 "\t\t\t\t\t6: Salami \n \n \n" +
                 "\t\t\t\t\t0: Bakåt");
             Submeny.PrintSummary(porder);
-            int pizzachoice = IntIn();
+            
             bool done = false;
             Pizza onepizza = new Pizza();
             while (!done)
             {
+                int pizzachoice = IntIn();
                 switch (pizzachoice)
                 {
                     case 1:
@@ -57,9 +58,12 @@ namespace KundTermiPizzaPalatset
                         //Submeny.StarMenuChoice(porder);
                         return;
                     default:
-                        Console.WriteLine("\t\t\t\t\tFelaktig inmatning, försök igen!");
+                        Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen:");
                         Thread.Sleep(1000);
-                        break;
+                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        Console.WriteLine("                                                                                                       ");
+                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        continue;
                 }
                 
             }
