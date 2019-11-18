@@ -10,5 +10,6 @@ namespace PizzamakerTerminal
         public static bool IsProgramRunning = true;
         public static int CurrentUserId;
         public static string CurrentUserName;
+        public static int MaxOnGoingOrders = 9;
     }
 }
