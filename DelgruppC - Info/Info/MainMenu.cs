@@ -64,6 +64,7 @@ namespace Info
         }
         public static void PrintLogo() /*Printar ut Logo för pizzaPalatset*/
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string pizzalogo = @"   
                             ██████╗ ██╗███████╗███████╗ █████╗                
                             ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
@@ -79,6 +80,7 @@ namespace Info
             ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
             ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
             Console.WriteLine(pizzalogo);
+            Console.ResetColor();
         }
     }
 }

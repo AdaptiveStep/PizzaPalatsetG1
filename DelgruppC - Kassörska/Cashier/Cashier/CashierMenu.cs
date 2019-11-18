@@ -93,6 +93,7 @@ namespace Cashier
         }
         public static void PrintLogo()//Printar ut PizzaPalatset logga.
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string pizzalogo = @"   
                         ██████╗ ██╗███████╗███████╗ █████╗                
                         ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
@@ -108,6 +109,7 @@ namespace Cashier
         ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
         ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
             Console.WriteLine(pizzalogo);
+            Console.ResetColor();
         }
     }
 }
