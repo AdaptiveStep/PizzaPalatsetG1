@@ -20,7 +20,7 @@
   * Programmet simulerar att ordrar kommer in och ut automatiskt. 
   * I programmet ser man pågående ordrar och färdiga ordrar.
 
-  ###### Kassa-terminalen: Kör bara .exe filen###
+  ###### Kassa-terminalen: Kör bara .exe filen
   * Starta även detta program med .exe filen. 
   * Kassörskan ser programmet och måste mata in sitt lösenordet Password123. 
   * Nya ordrar kommer in automatiskt (som en del av simulationen). 
