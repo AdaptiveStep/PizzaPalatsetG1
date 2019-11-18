@@ -37,7 +37,7 @@ namespace PizzamakerTerminal
                     Console.ReadKey();
                 }
             }
-            else if (key.Key == ConsoleKey.Enter)
+            else if (key.Key == ConsoleKey.Enter &&  Queue.CountTotalOrders() < Status.MaxOnGoingOrders)
             {
                 Data.GeneraterOrder();
             }
