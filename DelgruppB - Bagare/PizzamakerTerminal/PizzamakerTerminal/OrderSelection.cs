@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PizzamakerTerminal
 {
@@ -47,6 +48,13 @@ namespace PizzamakerTerminal
             }
             else if (key.Key == ConsoleKey.NumPad0 || key.Key == ConsoleKey.D0)
             {
+                foreach(var item in Queue.OrderList.ToList())
+                {
+                    if (item.isComplete)
+                    {
+                        Queue.DeleteOrderById(item.ID);
+                    }
+                }
                 Cock.Logout();
                 
                 Console.Clear();
