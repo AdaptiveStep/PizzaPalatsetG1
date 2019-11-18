@@ -13,7 +13,7 @@
   
   ###### Bagar-terminalen: Kör bara .exe filen
   * Delvis gjord. 
-  * Innehåller kod med klasser och metoder. Kompletteras möjligtvis.
+  * Innehåller kod med klasser och metoder.
   
   ###### Info-terminalen : Kör bara .exe filen
   * Starta programmet med .exe filen. 
