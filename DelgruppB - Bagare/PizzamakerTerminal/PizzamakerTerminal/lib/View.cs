@@ -44,25 +44,26 @@ namespace PizzamakerTerminal
 
         public static void DisplayWelcome()
         {
-            Console.WriteLine("\nVälkommen till Pizzeria Palatsen!");
+            Console.WriteLine("\nVälkommen till Pizzeria Palatset!");
         }
-        public static void DisplayOven()
-        {
-            Console.Clear();
-            Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("-                                                       -");
-            Console.WriteLine("-                   PIZZERIA PALATSEN                   -");
-            Console.WriteLine("-                                                       -");
-            Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("\n");
+        //public static void DisplayOven()
+        //{
+        //    Console.Clear();
+        //    Console.WriteLine("---------------------------------------------------------");
+        //    Console.WriteLine("-                                                       -");
+        //    Console.WriteLine("-                   PIZZERIA PALATSEN                   -");
+        //    Console.WriteLine("-                                                       -");
+        //    Console.WriteLine("---------------------------------------------------------");
+        //    Console.WriteLine("\n");
 
-            Console.WriteLine("Beställningsinformation: ");
-            Console.WriteLine(" ");
-        }
+        //    Console.WriteLine("Beställningsinformation: ");
+        //    Console.WriteLine(" ");
+        //}
 
         public static void DisplayHeader()
         {
-            Console.Write("Pizza-Palatset. Current username: \u001b[31m\u001b[47m{0}\u001b[0m\n", Status.CurrentUserName);
+            DisplayPizzaLogo();
+            Console.Write("\nCurrent username: \u001b[31m\u001b[47m{0}\u001b[0m\n", Status.CurrentUserName);
             Console.Write("Tangenter: 0 == logga ut, Enter == Generera Order, '-' == Ta bort Färdiga, 1-9 == Baka\n");
         }
         public static void DisplayOrders()
@@ -81,6 +82,7 @@ namespace PizzamakerTerminal
         }
         public static void DisplayFancyIntro()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             string pizzalogo = @"   
                                   ██████╗ ██╗███████╗███████╗ █████╗                
                                   ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
@@ -107,9 +109,30 @@ namespace PizzamakerTerminal
          ╚████╔╝ ██║  ██║███████╗██║  ██╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║ ╚████║██╗
           ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝╚═╝";
             Console.WriteLine(pizzalogo);
+            Console.ResetColor();
             Console.WriteLine("{0}{1}{2}", Color.ForeGround.Cyan, "\t\t\t\t\tTryck på valfri tangent för att fortsätta ", Color.Reset);
             Console.ReadKey();
             Console.Clear();
+        }
+        public static void DisplayPizzaLogo()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            string pizzalogo = @"  
+                                  ██████╗ ██╗███████╗███████╗ █████╗                
+                                  ██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗               
+                                  ██████╔╝██║  ███╔╝   ███╔╝ ███████║               
+                                  ██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║               
+                                  ██║     ██║███████╗███████╗██║  ██║               
+                                  ╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝               
+                                                                                    
+                  ██████╗  █████╗ ██╗      █████╗ ████████╗███████╗███████╗████████╗
+                  ██╔══██╗██╔══██╗██║     ██╔══██╗╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+                  ██████╔╝███████║██║     ███████║   ██║   ███████╗█████╗     ██║   
+                  ██╔═══╝ ██╔══██║██║     ██╔══██║   ██║   ╚════██║██╔══╝     ██║   
+                  ██║     ██║  ██║███████╗██║  ██║   ██║   ███████║███████╗   ██║   
+                  ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝   ";
+            Console.Write(pizzalogo);
+            Console.ResetColor();
         }
     }
 }

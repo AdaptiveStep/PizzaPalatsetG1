@@ -17,7 +17,7 @@ namespace PizzamakerTerminal
             {
                 //OrderInfo.ActivateOrder(res);
                 var orderToBake = Queue.GetOrderById(res);
-                if(orderToBake != null)
+                if(orderToBake != null && orderToBake.isComplete != true)
                 {
                     //BAKE
                     Console.Clear();
@@ -48,6 +48,7 @@ namespace PizzamakerTerminal
             else if (key.Key == ConsoleKey.NumPad0 || key.Key == ConsoleKey.D0)
             {
                 Cock.Logout();
+                
                 Console.Clear();
             }
             else

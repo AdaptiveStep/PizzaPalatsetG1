@@ -21,7 +21,7 @@ namespace PizzamakerTerminal
             // Hello screen thingy
             View.DisplayFancyIntro();
             // Text som hälsar användaren välkommen till sin egen arbetsplats
-            View.DisplayWelcome();
+            View.DisplayPizzaLogo();
             // 'key' reassignas till så fort ny Console.ReadKey() sker
             ConsoleKeyInfo key = new ConsoleKeyInfo();
             // Startar Programmet med en ny randomiserad order
@@ -37,7 +37,7 @@ namespace PizzamakerTerminal
                 {
                     // LoginCheck som upprepas tills den är godkänd
                     Cock.LogIn();
-                    View.DisplayIntro();
+                    View.DisplayPizzaLogo();
                 }
 
                 Console.Clear();
