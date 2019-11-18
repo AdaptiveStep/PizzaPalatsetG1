@@ -86,54 +86,55 @@ namespace KundTermiPizzaPalatset
                 //}
 
                 if (info.KeyChar.ToString() == "1")
-				{
+                {
 
-					return 1;
-				}
-				else if (info.Key == ConsoleKey.D2)
-				{
-					return 2;
-				}
-				else if (info.Key == ConsoleKey.D3)
-				{
-					return 3;
-				}
-				else if (info.Key == ConsoleKey.D4)
-				{
-					return 4;
-				}
-				else if (info.Key == ConsoleKey.D5)
-				{
-					return 5;
-				}
-				else if (info.Key == ConsoleKey.D6)
-				{
-					return 6;
-				}
-				else if (info.Key == ConsoleKey.D7)
-				{
-					return 7;
-				}
-				else if (info.Key == ConsoleKey.D8)
-				{
-					return 8;
-				}
-				else if (info.Key == ConsoleKey.D9)
-				{
-					return 9;
-				}
+                    return 1;
+                }
+                else if (info.Key == ConsoleKey.D2)
+                {
+                    return 2;
+                }
+                else if (info.Key == ConsoleKey.D3)
+                {
+                    return 3;
+                }
+                else if (info.Key == ConsoleKey.D4)
+                {
+                    return 4;
+                }
+                else if (info.Key == ConsoleKey.D5)
+                {
+                    return 5;
+                }
+                else if (info.Key == ConsoleKey.D6)
+                {
+                    return 6;
+                }
+                else if (info.Key == ConsoleKey.D7)
+                {
+                    return 7;
+                }
+                else if (info.Key == ConsoleKey.D8)
+                {
+                    return 8;
+                }
+                else if (info.Key == ConsoleKey.D9)
+                {
+                    return 9;
+                }
                 else if (info.Key == ConsoleKey.D0)
                 {
                     return 0;
                 }
-				else
-				{ 
-                    Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen"); 
-				    Thread.Sleep(200);
-                    //Console.Cur  
+                else
+
+                {
+                    Console.WriteLine("\t\t\t\t\tFelaktig inmatning! försök igen");
+                    Thread.Sleep(200);
+                    Console.WriteLine(" ");
                     continue;
-				    //break; 
-				}
+                    //break; 
+                }
 				
 				//try
 				//{
