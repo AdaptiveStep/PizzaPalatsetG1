@@ -10,11 +10,13 @@ namespace PizzamakerTerminal
         public bool isComplete { get; set; }
         private string Name;
         private string[] Ingredients;
+        private Timestamp timestamps;
 
         public Order()
         {
             ID = Queue.GetLowestIdNum();
-            isComplete = false;       
+            isComplete = false;
+            timestamps.time_created = DateTime.Now;
         }
         public void SetIngredients(string[] ingrs)
         {
@@ -44,6 +46,7 @@ namespace PizzamakerTerminal
         public void SetComplete()
         {
             isComplete = true;
+            timestamps.time_finished = DateTime.Now;
         }
     }
 }
