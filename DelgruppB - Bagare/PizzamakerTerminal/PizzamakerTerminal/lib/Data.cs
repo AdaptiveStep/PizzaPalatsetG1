@@ -1,51 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PizzamakerTerminal
 {
-    /*
-     * *******************************************************************************************************************************
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     *                                      Plz Ignorera hela den här filen. Det kommer ut data, titta inte närmare
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * *******************************************************************************************************************************
-     */
 
     class Data
     {
@@ -68,7 +25,7 @@ namespace PizzamakerTerminal
         };
         private static List<double> c = new List<double>()
         {
-            0.50, 
+            0.50,
             0.20,
             0.05,
             0.15,
@@ -80,9 +37,9 @@ namespace PizzamakerTerminal
             int n = rand.Next(0, a.Count - 1);
             Order newOrder = new Order();
             //Product p = new Product();
- 
-            newOrder.SetName( a[n] );
-            newOrder.SetIngredients( b[n]._);
+
+            newOrder.SetName(a[n]);
+            newOrder.SetIngredients(b[n]._);
             Queue.AddOrder(newOrder);
         }
     }

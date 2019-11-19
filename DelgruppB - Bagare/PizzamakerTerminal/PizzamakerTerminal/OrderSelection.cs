@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace PizzamakerTerminal
@@ -18,17 +17,17 @@ namespace PizzamakerTerminal
             {
                 //OrderInfo.ActivateOrder(res);
                 var orderToBake = Queue.GetOrderById(res);
-                if(orderToBake != null && orderToBake.isComplete != true)
+                if (orderToBake != null && orderToBake.isComplete != true)
                 {
                     //BAKE
                     Console.Clear();
-                    Console.Write("BAKING order {0} {1} [{2}]\n",orderToBake.ID, orderToBake.GetName(), orderToBake.GetIngredients());
-                    
+                    Console.Write("BAKING order {0} {1} [{2}]\n", orderToBake.ID, orderToBake.GetName(), orderToBake.GetIngredients());
+
                     // Animera en loading bar
-                    foreach(char dot in new char[5] { '.', '.', '.','.','.' })
+                    foreach (char dot in new char[5] { '.', '.', '.', '.', '.' })
                     {
                         Console.Write(dot);
-                        System.Threading.Thread.Sleep(900);
+                        System.Threading.Thread.Sleep(500);
                     }
                     Console.Beep();
                     // Set Order som klar
@@ -38,7 +37,7 @@ namespace PizzamakerTerminal
                     Console.ReadKey();
                 }
             }
-            else if (key.Key == ConsoleKey.Enter &&  Queue.CountTotalOrders() < Status.MaxOnGoingOrders)
+            else if (key.Key == ConsoleKey.Enter && Queue.CountTotalOrders() < Status.MaxOnGoingOrders)
             {
                 Data.GeneraterOrder();
             }
@@ -48,7 +47,7 @@ namespace PizzamakerTerminal
             }
             else if (key.Key == ConsoleKey.NumPad0 || key.Key == ConsoleKey.D0)
             {
-                foreach(var item in Queue.OrderList.ToList())
+                foreach (var item in Queue.OrderList.ToList())
                 {
                     if (item.isComplete)
                     {
@@ -56,12 +55,8 @@ namespace PizzamakerTerminal
                     }
                 }
                 Cock.Logout();
-                
+
                 Console.Clear();
-            }
-            else
-            {
-                //Console.Beep(); // Error Beep när
             }
         }
     }

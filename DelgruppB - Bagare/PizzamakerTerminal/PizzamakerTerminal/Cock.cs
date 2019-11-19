@@ -10,12 +10,8 @@ namespace PizzamakerTerminal
         {
             string[] users = new string[4] { "user1", "user2", "user3", "user4" };
             string[] passwds = new string[4] { "1111", "2222", "3333", "4444" };
-            // do-while loop dyker så länge upp tills användaren inmater korrekta uppgifter 
-            //Console.WriteLine("\t\t\t\t\t\t\t\t\tInlogningsinformation: ");
-            //for (int i = 0; i < users.Length; i++)
-            //{
-            //    Console.WriteLine("\t\t\t\t\t\t\t\t\tanvändernamn: {0} >> lösenord: {1}", users[0], users[1]);
-            //}
+            // do-while loop dyker så länge upp användaren inmater korrekta uppgifter 
+
             // Tar input uppgifter från bagare
             Console.Write("\nSkriv ditt användarnamn: ");
             string username = Console.ReadLine();
@@ -29,9 +25,6 @@ namespace PizzamakerTerminal
                 Status.IsLoggedIn = true;
                 Status.CurrentUserId = Array.IndexOf(users, username); // Assignar userid
                 Status.CurrentUserName = users[Status.CurrentUserId];
-                //int x = Array.IndexOf(users, username);
-                //user = x;
-                //User.OrderTerminal(user);
             }
             else if (username == "0" || password == "0")
             {

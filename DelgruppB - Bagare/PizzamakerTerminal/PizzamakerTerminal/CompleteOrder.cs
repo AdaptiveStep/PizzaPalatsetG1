@@ -1,1 +1,0 @@
-﻿// Omstruktur CompletedOrder har flyttats till Order.cs

@@ -1,1 +1,0 @@
-﻿// Omstruktur. Har kvar filen så inte någon råkar pajja via git

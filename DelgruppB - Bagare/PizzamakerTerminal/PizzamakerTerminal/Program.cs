@@ -6,7 +6,7 @@
  * 
  * Version 2.0
  * elchinoj08@gmail.com 
- * Elchin J. (group 1)
+ * Elchin J. & Jakob A. (group 1)
  * 
  * Support & feedback av jkb (https://jkb.zone)
  * 
@@ -45,7 +45,7 @@ namespace PizzamakerTerminal
                 // 'View' printar långa textstringar
                 View.DisplayHeader();
                 View.DisplayOrders();
-           
+
                 key = Console.ReadKey(true);
 
                 OrderSelection.OrderChoice(key);
