@@ -31,7 +31,7 @@ namespace KundTermiPizzaPalatset
             Console.WriteLine("\t\t\t\tIngredienser valda nu: tomatsås ost " + ppizza.printIngreds());
 
             Console.WriteLine(porder.printProducts() +
-                "\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ",)");
+                "\n\t\t\t\t(Antal Produkter hittils tillagda: " + porder.CustomerProducts.Count + ",)");
 
             int summaryprice = porder.TotalSum() + ppizza.price; //totalsumma av pris
             Console.WriteLine("\t\t\t\tHela orderns pris hittils: " + porder.TotalSum() + " + " + ppizza.price + " = " + summaryprice);
