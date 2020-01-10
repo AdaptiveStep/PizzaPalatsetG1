@@ -10,7 +10,7 @@ namespace PizzamakerTerminal
         public bool isComplete { get; set; }
         private string Name;
         private string[] Ingredients;
-        private Timestamp timestamps;
+        private Timestamp timestamps = new Timestamp();
 
         public Order()
         {
